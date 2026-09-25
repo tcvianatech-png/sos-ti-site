@@ -3,13 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Suporte técnico remoto para computadores, Wi-Fi, impressoras, e-mail e segurança digital. Atendimento claro, rápido e humano.">
+  <meta name="description" content="Suporte técnico remoto para computadores, Wi-Fi, impressoras, e-mail e segurança digital. Atendimento claro, rápido e humano pelo WhatsApp, de segunda a sábado.">
   <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://tcvianatech.com.br/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="TC Viana Tech">
+  <meta property="og:url" content="https://tcvianatech.com.br/">
   <meta property="og:title" content="TC Viana Tech — Suporte técnico remoto">
-  <meta property="og:description" content="Tecnologia funcionando. Você seguindo em frente.">
-  <title>TC Viana Tech — Suporte técnico remoto</title>
+  <meta property="og:description" content="Computador lento, Wi-Fi, impressora, vírus ou e-mail? Resolvemos à distância, com atendimento humano e seguro.">
+  <meta property="og:image" content="https://tcvianatech.com.br/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="TC Viana Tech — Suporte técnico remoto">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>TC Viana Tech — Suporte técnico remoto para PC, Wi-Fi e impressora</title>
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://tcvianatech.com.br/#empresa",
+        "name": "TC Viana Tech",
+        "legalName": "TCVIANA TECH LTDA",
+        "taxID": "66.766.206/0001-35",
+        "url": "https://tcvianatech.com.br/",
+        "logo": "https://tcvianatech.com.br/apple-touch-icon.png",
+        "image": "https://tcvianatech.com.br/og-image.png",
+        "description": "Suporte técnico remoto para computadores, internet e Wi-Fi, impressoras, e-mail, segurança digital e backup.",
+        "email": "tcviana.tech@gmail.com",
+        "telephone": "+55-31-98395-4008",
+        "areaServed": { "@type": "Country", "name": "Brasil" },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        }],
+        "knowsAbout": ["Suporte técnico remoto", "Otimização de computador", "Redes Wi-Fi", "Impressoras", "Remoção de vírus", "Backup de arquivos"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Como funciona o atendimento remoto?", "acceptedAnswer": { "@type": "Answer", "text": "Você recebe uma orientação para iniciar uma conexão temporária. O acesso só começa depois da sua autorização, e você pode acompanhar e encerrar a sessão." } },
+          { "@type": "Question", "name": "Todo problema pode ser resolvido à distância?", "acceptedAnswer": { "@type": "Answer", "text": "Problemas de sistema, programas, e-mail, configuração e rede geralmente podem ser tratados remotamente. Se houver defeito físico ou necessidade de peça, isso será informado no diagnóstico." } },
+          { "@type": "Question", "name": "Preciso entender de informática?", "acceptedAnswer": { "@type": "Answer", "text": "Não. As orientações são passadas passo a passo, usando linguagem simples." } },
+          { "@type": "Question", "name": "Quando o atendimento é realizado?", "acceptedAnswer": { "@type": "Answer", "text": "O horário informado é de segunda a sábado, das 9h às 20h. A disponibilidade e o melhor horário para o atendimento são confirmados pelo WhatsApp." } },
+          { "@type": "Question", "name": "Como o pagamento é combinado?", "acceptedAnswer": { "@type": "Answer", "text": "O valor e as formas de pagamento são confirmados pelo WhatsApp antes do início do serviço." } }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -180,8 +230,11 @@
     .footer-meta a:hover { color: var(--blue); }
     .mobile-contact { display: none; }
 
-    [data-reveal] { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
-    [data-reveal].visible { opacity: 1; transform: none; }
+    .js [data-reveal] { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+    .js [data-reveal].visible { opacity: 1; transform: none; }
+    .support-person small.offline { color: var(--muted); }
+    .support-person small.offline::before { background: #f0a020; }
+    .footer-legal { color: var(--muted); font-size: .7rem; opacity: .85; }
     a:focus-visible, summary:focus-visible { outline: 3px solid rgba(23,105,255,.45); outline-offset: 4px; border-radius: 6px; }
 
     @media (max-width: 980px) {
@@ -252,7 +305,7 @@
 
   <main id="conteudo">
     <section class="hero wrap" id="inicio">
-      <div class="hero-copy" data-reveal>
+      <div class="hero-copy">
         <span class="kicker">Suporte técnico remoto</span>
         <h1>Tecnologia funcionando. <span>Você seguindo em frente.</span></h1>
         <p>Resolvemos problemas de computador, internet, impressora e e-mail à distância — com atendimento humano, seguro e explicado sem complicação.</p>
@@ -268,7 +321,7 @@
         <div class="orb" aria-hidden="true"></div>
         <div class="support-card">
           <div class="support-head">
-            <div class="support-person"><span class="avatar">TC</span><span><strong>Suporte TC Viana</strong><small>Disponível agora</small></span></div>
+            <div class="support-person"><span class="avatar">TC</span><span><strong>Suporte TC Viana</strong><small id="status">Seg a sáb · 9h–20h</small></span></div>
             <span class="secure-label">sessão segura</span>
           </div>
           <div class="conversation">
@@ -379,7 +432,7 @@
   <footer>
     <div class="footer-inner wrap">
       <a class="brand" href="#inicio"><span class="brand-mark">TC</span><span class="brand-text">TC Viana <span>Tech</span></span></a>
-      <div class="footer-meta"><a href="mailto:tcviana.tech@gmail.com">tcviana.tech@gmail.com</a><span>Seg a sáb · 9h–20h</span><span>© <span id="year"></span> TC Viana Tech</span></div>
+      <div class="footer-meta"><a href="mailto:tcviana.tech@gmail.com">tcviana.tech@gmail.com</a><span>Seg a sáb · 9h–20h</span><span>© <span id="year"></span> TC Viana Tech</span><span class="footer-legal">TCVIANA TECH LTDA · CNPJ 66.766.206/0001-35</span></div>
     </div>
   </footer>
 
@@ -406,6 +459,17 @@
     updateHeader();
     window.addEventListener('scroll', updateHeader, { passive: true });
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Status real conforme o horário de Brasília (seg a sáb, 9h–20h)
+    const status = document.getElementById('status');
+    try {
+      const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: 'numeric', hourCycle: 'h23' }).formatToParts(new Date());
+      const day = parts.find((p) => p.type === 'weekday').value;
+      const hour = Number(parts.find((p) => p.type === 'hour').value);
+      const open = day !== 'Sun' && hour >= 9 && hour < 20;
+      status.textContent = open ? 'Disponível agora' : 'Fora do horário · responde a partir das 9h';
+      status.classList.toggle('offline', !open);
+    } catch (e) { /* mantém o horário estático */ }
   </script>
 </body>
 </html>

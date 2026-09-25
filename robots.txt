@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tcvianatech.com.br/sitemap.xml
