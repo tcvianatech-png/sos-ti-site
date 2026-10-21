@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Suporte técnico remoto para computadores, Wi-Fi, impressoras, e-mail e segurança digital. Atendimento claro, rápido e humano pelo WhatsApp, de segunda a sábado.">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#0f2a24">
   <link rel="canonical" href="https://tcvianatech.com.br/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
@@ -54,6 +54,7 @@
           { "@type": "Question", "name": "Todo problema pode ser resolvido à distância?", "acceptedAnswer": { "@type": "Answer", "text": "Problemas de sistema, programas, e-mail, configuração e rede geralmente podem ser tratados remotamente. Se houver defeito físico ou necessidade de peça, isso será informado no diagnóstico." } },
           { "@type": "Question", "name": "Preciso entender de informática?", "acceptedAnswer": { "@type": "Answer", "text": "Não. As orientações são passadas passo a passo, usando linguagem simples." } },
           { "@type": "Question", "name": "Quando o atendimento é realizado?", "acceptedAnswer": { "@type": "Answer", "text": "O horário informado é de segunda a sábado, das 9h às 20h. A disponibilidade e o melhor horário para o atendimento são confirmados pelo WhatsApp." } },
+          { "@type": "Question", "name": "Em quais cidades vocês atendem?", "acceptedAnswer": { "@type": "Answer", "text": "O atendimento é 100% remoto, então funciona em qualquer cidade do Brasil, desde que você tenha internet no equipamento." } },
           { "@type": "Question", "name": "Como o pagamento é combinado?", "acceptedAnswer": { "@type": "Answer", "text": "O valor e as formas de pagamento são confirmados pelo WhatsApp antes do início do serviço." } }
         ]
       }
@@ -62,226 +63,152 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #0a1f44;
-      --blue: #1769ff;
-      --blue-dark: #0755dc;
-      --cyan: #19b5fe;
-      --ink: #14233c;
-      --muted: #62708a;
-      --pale: #eff6ff;
-      --soft: #f7faff;
-      --white: #fff;
-      --line: #dfe8f5;
-      --success: #0fa878;
-      --shadow: 0 24px 70px rgba(31, 82, 153, .13);
-      --radius: 22px;
-      --max: 1180px;
+      --ink: #0f2a24;
+      --ink-2: #16382f;
+      --text: #3d4f49;
+      --muted: #6b7c76;
+      --cream: #faf6ef;
+      --sand: #f1e9db;
+      --line: #e4dac8;
+      --accent: #ee6a2d;
+      --accent-dark: #d4561c;
+      --mint: #cfe9dd;
+      --radius: 20px;
     }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body { margin: 0; background: var(--cream); color: var(--text); font: 400 1rem/1.65 "Inter", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    h1, h2, h3 { margin: 0; color: var(--ink); font-family: "Fraunces", Georgia, serif; font-weight: 700; letter-spacing: -.02em; line-height: 1.12; }
+    p { margin: 0; }
+    a { color: inherit; }
+    svg { display: block; }
+    .wrap { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+    .skip { position: absolute; left: -999px; top: 8px; z-index: 100; padding: 10px 16px; background: var(--ink); color: #fff; border-radius: 8px; }
+    .skip:focus { left: 8px; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-    body { color: var(--ink); background: var(--white); font-family: "DM Sans", sans-serif; line-height: 1.6; overflow-x: hidden; }
-    body::before { content: ""; position: absolute; z-index: -2; inset: 0 0 auto; height: 820px; background: linear-gradient(138deg, #fff 15%, #f5f9ff 58%, #eaf3ff); }
-    a { color: inherit; text-decoration: none; }
-    button { font: inherit; }
-    .wrap { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
-    .skip { position: fixed; top: -70px; left: 18px; z-index: 100; padding: 10px 15px; color: #fff; background: var(--blue); border-radius: 8px; font-weight: 700; }
-    .skip:focus { top: 12px; }
+    header { position: sticky; top: 0; z-index: 50; background: rgba(250,246,239,.88); backdrop-filter: blur(12px); border-bottom: 1px solid transparent; transition: border-color .2s; }
+    header.scrolled { border-color: var(--line); }
+    nav { height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; color: var(--ink); font: 700 1.2rem "Fraunces", serif; letter-spacing: -.02em; }
+    .brand svg { width: 38px; height: 38px; flex: none; }
+    .brand em { font-style: normal; color: var(--accent); }
+    .menu { display: flex; align-items: center; gap: 30px; font-size: .92rem; font-weight: 500; }
+    .menu a { text-decoration: none; color: var(--text); }
+    .menu a:hover { color: var(--ink); }
+    .menu .nav-button { padding: 11px 20px; color: #fff; background: var(--ink); border-radius: 999px; font-weight: 600; transition: background .2s; }
+    .menu .nav-button:hover { background: var(--ink-2); color: #fff; }
 
-    header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.88); border-bottom: 1px solid transparent; backdrop-filter: blur(18px); transition: border-color .2s, box-shadow .2s; }
-    header.scrolled { border-color: var(--line); box-shadow: 0 8px 24px rgba(15,45,90,.05); }
-    nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--navy); font: 800 1.02rem "Manrope", sans-serif; letter-spacing: -.03em; }
-    .brand-mark { position: relative; width: 35px; height: 35px; overflow: hidden; display: grid; place-items: center; color: #fff; background: var(--blue); border-radius: 11px; box-shadow: 0 9px 22px rgba(23,105,255,.24); font-size: .72rem; letter-spacing: -.06em; }
-    .brand-mark::after { content: ""; position: absolute; width: 23px; height: 23px; right: -9px; bottom: -9px; border: 5px solid rgba(255,255,255,.32); border-radius: 50%; }
-    .brand-text span { color: var(--blue); }
-    .menu { display: flex; align-items: center; gap: 28px; color: var(--muted); font-size: .86rem; font-weight: 600; }
-    .menu a:hover { color: var(--blue); }
-    .nav-button { min-height: 43px; padding: 0 17px; display: inline-flex; align-items: center; gap: 8px; color: #fff !important; background: var(--navy); border-radius: 10px; transition: transform .18s, background .18s; }
-    .nav-button:hover { color: #fff; background: var(--blue); transform: translateY(-1px); }
-
-    .hero { min-height: 690px; display: grid; grid-template-columns: 1.03fr .97fr; gap: clamp(45px, 7vw, 92px); align-items: center; padding-block: 86px 98px; }
-    .kicker { display: inline-flex; align-items: center; gap: 9px; padding: 7px 11px; color: var(--blue-dark); background: #eaf2ff; border: 1px solid #d5e5ff; border-radius: 999px; font: 700 .72rem "Manrope", sans-serif; text-transform: uppercase; letter-spacing: .08em; }
-    .kicker::before { content: ""; width: 7px; height: 7px; background: var(--cyan); border-radius: 50%; box-shadow: 0 0 0 4px rgba(25,181,254,.12); }
-    h1, h2 { color: var(--navy); font-family: "Manrope", sans-serif; letter-spacing: -.055em; }
-    h1 { max-width: 680px; margin: 22px 0 24px; font-size: clamp(2.8rem, 5.4vw, 5rem); line-height: 1.01; }
-    h1 span { color: var(--blue); }
-    .hero-copy > p { max-width: 590px; color: var(--muted); font-size: clamp(1.02rem, 1.5vw, 1.17rem); }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 31px; }
-    .button { min-height: 54px; padding: 0 23px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; border: 1px solid transparent; border-radius: 12px; font: 700 .92rem "Manrope", sans-serif; transition: transform .18s, box-shadow .18s, background .18s, border-color .18s; }
+    .button { display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 999px; border: 2px solid transparent; font: 600 .98rem "Inter", sans-serif; text-decoration: none; transition: transform .2s, background .2s, box-shadow .2s; }
     .button:hover { transform: translateY(-2px); }
-    .button-primary { color: #fff; background: var(--blue); box-shadow: 0 14px 28px rgba(23,105,255,.23); }
-    .button-primary:hover { background: var(--blue-dark); box-shadow: 0 18px 32px rgba(23,105,255,.3); }
-    .button-secondary { color: var(--navy); background: rgba(255,255,255,.7); border-color: var(--line); }
-    .button-secondary:hover { background: #fff; border-color: #b7c9e2; }
-    .button .arrow { transition: transform .18s; }
-    .button:hover .arrow { transform: translateX(3px); }
-    .email-contact { width: fit-content; margin-top: 17px; display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: .8rem; font-weight: 600; }
-    .email-contact::before { content: "@"; width: 25px; height: 25px; display: grid; place-items: center; color: var(--blue); background: var(--pale); border-radius: 8px; font-weight: 800; }
-    .email-contact:hover { color: var(--blue); }
-    .hero-meta { margin-top: 25px; display: flex; flex-wrap: wrap; gap: 13px 24px; color: var(--muted); font-size: .79rem; font-weight: 600; }
-    .hero-meta span { display: inline-flex; align-items: center; gap: 7px; }
-    .hero-meta span::before { content: "✓"; color: var(--success); font-weight: 800; }
+    .button-primary { color: #fff; background: var(--accent); box-shadow: 0 10px 26px rgba(238,106,45,.32); }
+    .button-primary:hover { background: var(--accent-dark); }
+    .button-ghost { color: var(--ink); border-color: var(--ink); background: transparent; }
+    .button-ghost:hover { background: var(--ink); color: #fff; }
 
-    .hero-visual { position: relative; min-height: 500px; display: grid; place-items: center; }
-    .orb { position: absolute; width: 430px; height: 430px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #50c9ff, #1769ff 50%, #0a3d9c); box-shadow: 0 35px 90px rgba(23,105,255,.25); }
-    .orb::before, .orb::after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.35); border-radius: 50%; }
-    .orb::before { inset: 35px; }
-    .orb::after { inset: 86px; }
-    .support-card { position: relative; z-index: 2; width: min(410px, 92%); overflow: hidden; background: rgba(255,255,255,.94); border: 1px solid rgba(255,255,255,.76); border-radius: 21px; box-shadow: 0 30px 75px rgba(4,36,88,.25); backdrop-filter: blur(16px); }
-    .support-head { padding: 18px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
-    .support-person { display: flex; align-items: center; gap: 11px; }
-    .avatar { width: 40px; height: 40px; display: grid; place-items: center; color: #fff; background: var(--navy); border-radius: 12px; font: 800 .72rem "Manrope", sans-serif; }
-    .support-person strong { display: block; color: var(--navy); font-size: .88rem; }
-    .support-person small { display: flex; align-items: center; gap: 6px; color: var(--success); font-size: .69rem; font-weight: 700; }
-    .support-person small::before { content: ""; width: 6px; height: 6px; background: var(--success); border-radius: 50%; }
-    .secure-label { padding: 6px 9px; color: var(--blue-dark); background: var(--pale); border-radius: 99px; font-size: .64rem; font-weight: 700; }
-    .conversation { padding: 22px 20px 24px; display: grid; gap: 13px; background: #fbfdff; }
-    .bubble { width: fit-content; max-width: 84%; padding: 11px 13px; border-radius: 13px; font-size: .78rem; line-height: 1.5; }
-    .bubble.client { justify-self: end; color: #fff; background: var(--blue); border-bottom-right-radius: 4px; }
-    .bubble.tech { color: var(--ink); background: #eaf2ff; border-bottom-left-radius: 4px; }
-    .diagnosis { margin-top: 4px; padding: 14px; display: grid; gap: 10px; background: #fff; border: 1px solid var(--line); border-radius: 13px; }
-    .diagnosis-row { display: grid; grid-template-columns: 9px 1fr auto; align-items: center; gap: 10px; color: var(--muted); font-size: .71rem; }
-    .diagnosis-row i { width: 8px; height: 8px; background: var(--success); border-radius: 50%; box-shadow: 0 0 0 4px rgba(15,168,120,.1); }
-    .diagnosis-row b { color: var(--success); font-size: .65rem; }
-    .floating-note { position: absolute; z-index: 3; right: -18px; bottom: 38px; padding: 13px 16px; display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 16px 40px rgba(10,45,95,.15); font-size: .75rem; font-weight: 700; }
-    .floating-note b { width: 29px; height: 29px; display: grid; place-items: center; color: var(--success); background: #e8fbf5; border-radius: 50%; }
+    .hero { padding: 64px 0 88px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+    .kicker { display: inline-flex; align-items: center; gap: 9px; padding: 7px 14px; color: var(--ink); background: var(--mint); border-radius: 999px; font-size: .8rem; font-weight: 600; }
+    .kicker i { width: 8px; height: 8px; background: #1f9d6b; border-radius: 50%; box-shadow: 0 0 0 4px rgba(31,157,107,.2); }
+    .kicker.offline i { background: #b9a98f; box-shadow: 0 0 0 4px rgba(185,169,143,.25); }
+    h1 { margin: 22px 0 20px; font-size: clamp(2.5rem, 5.4vw, 4.2rem); }
+    h1 span { color: var(--accent); font-style: italic; }
+    .hero p.lead { max-width: 520px; font-size: 1.12rem; }
+    .hero-actions { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px; }
+    .email-contact { margin-top: 18px; display: inline-block; font-size: .9rem; color: var(--muted); }
+    .hero-points { margin: 34px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px 26px; font-size: .88rem; font-weight: 500; color: var(--ink); }
+    .hero-points li { display: flex; align-items: center; gap: 8px; }
+    .hero-points li::before { content: ""; width: 18px; height: 18px; background: var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3.2L15 6.8' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat; border-radius: 50%; }
+    .hero-art svg { width: 100%; height: auto; }
 
-    .confidence { border-block: 1px solid var(--line); background: #fff; }
-    .confidence-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
-    .confidence-item { padding: 26px 32px; display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-items: center; border-right: 1px solid var(--line); }
-    .confidence-item:last-child { border-right: 0; }
-    .confidence-icon { grid-row: span 2; width: 42px; height: 42px; display: grid; place-items: center; color: var(--blue); background: var(--pale); border-radius: 12px; font: 800 .66rem "Manrope", sans-serif; }
-    .confidence-item strong { color: var(--navy); font-size: .88rem; }
-    .confidence-item small { color: var(--muted); font-size: .74rem; }
+    section { padding: 88px 0; }
+    .section-head { max-width: 640px; margin-bottom: 48px; }
+    .eyebrow { display: block; margin-bottom: 14px; color: var(--accent-dark); font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    h2 { font-size: clamp(2rem, 3.8vw, 2.9rem); }
+    .section-head p { margin-top: 16px; font-size: 1.05rem; }
 
-    section { padding-block: 105px; }
-    .section-head { max-width: 720px; margin-bottom: 44px; }
-    .eyebrow { color: var(--blue); font: 800 .72rem "Manrope", sans-serif; text-transform: uppercase; letter-spacing: .12em; }
-    .section-head h2 { margin: 12px 0 13px; font-size: clamp(2rem, 3.8vw, 3.35rem); line-height: 1.1; }
-    .section-head p { max-width: 620px; color: var(--muted); }
+    .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .service { padding: 30px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); transition: transform .25s, box-shadow .25s; }
+    .service:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(15,42,36,.09); }
+    .service .ico { width: 56px; height: 56px; margin-bottom: 22px; display: grid; place-items: center; background: var(--sand); border-radius: 16px; }
+    .service .ico svg { width: 30px; height: 30px; fill: none; stroke: var(--ink); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .service .ico svg .a { stroke: var(--accent); }
+    .service h3 { margin-bottom: 8px; font-size: 1.28rem; }
+    .service p { font-size: .95rem; }
 
-    .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .service { min-height: 225px; padding: 28px; display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 10px 34px rgba(30,77,142,.055); transition: transform .2s, border-color .2s, box-shadow .2s; }
-    .service:hover { transform: translateY(-5px); border-color: #b8cff2; box-shadow: 0 20px 48px rgba(30,77,142,.11); }
-    .service-icon { width: 50px; height: 50px; margin-bottom: 28px; display: grid; place-items: center; color: var(--blue); background: var(--pale); border-radius: 14px; font: 800 .68rem "Manrope", sans-serif; }
-    .service h3 { margin-bottom: 8px; color: var(--navy); font: 700 1.06rem "Manrope", sans-serif; }
-    .service p { color: var(--muted); font-size: .86rem; }
-    .services-action { margin-top: 20px; padding: 22px 24px; display: flex; align-items: center; justify-content: space-between; gap: 22px; background: var(--pale); border: 1px solid #d5e5ff; border-radius: 16px; }
-    .services-action strong { display: block; color: var(--navy); font: 700 .96rem "Manrope", sans-serif; }
-    .services-action p { color: var(--muted); font-size: .8rem; }
-    .services-action .button { flex-shrink: 0; }
+    .process { background: var(--ink); color: #c9d8d2; border-radius: 40px; width: min(1280px, calc(100% - 24px)); margin-inline: auto; }
+    .process h2, .process h3 { color: #fff; }
+    .process .eyebrow { color: #f6a77e; }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; counter-reset: step; }
+    .step { padding: 28px 24px 26px; background: var(--ink-2); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); }
+    .step::before { counter-increment: step; content: "0" counter(step); display: block; margin-bottom: 26px; color: var(--accent); font: 700 2.4rem "Fraunces", serif; line-height: 1; }
+    .step h3 { margin-bottom: 8px; font-size: 1.15rem; }
+    .step p { font-size: .92rem; }
 
-    .process { background: var(--navy); }
-    .process .eyebrow { color: #79cfff; }
-    .process .section-head h2, .process .section-head p { color: #fff; }
-    .process .section-head p { opacity: .68; }
-    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .step { position: relative; padding: 25px 22px; border: 1px solid rgba(255,255,255,.13); border-radius: 17px; background: rgba(255,255,255,.055); }
-    .step:not(:last-child)::after { content: "→"; position: absolute; z-index: 3; right: -13px; top: 31px; width: 26px; height: 26px; display: grid; place-items: center; color: #fff; background: var(--blue); border-radius: 50%; font-size: .7rem; }
-    .step-number { display: block; margin-bottom: 34px; color: #79cfff; font: 800 .72rem "Manrope", sans-serif; letter-spacing: .1em; }
-    .step h3 { margin-bottom: 8px; color: #fff; font: 700 .98rem "Manrope", sans-serif; }
-    .step p { color: rgba(255,255,255,.62); font-size: .82rem; }
+    .safety-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: center; }
+    .safety-art { padding: 28px; background: var(--mint); border-radius: 32px; }
+    .safety-art svg { width: 100%; height: auto; }
+    .safety-intro { margin-top: 16px; font-size: 1.05rem; }
+    .safety-list { margin: 28px 0 0; padding: 0; list-style: none; display: grid; gap: 18px; }
+    .safety-list li { display: grid; grid-template-columns: 40px 1fr; gap: 16px; align-items: start; }
+    .safety-list b { width: 40px; height: 40px; display: grid; place-items: center; color: #fff; background: var(--ink); border-radius: 12px; }
+    .safety-list strong { display: block; color: var(--ink); font-weight: 600; }
+    .safety-list span { font-size: .94rem; }
 
-    .safety-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(45px, 7vw, 90px); align-items: center; }
-    .safety-visual { position: relative; min-height: 410px; padding: 36px; display: grid; place-items: center; overflow: hidden; background: linear-gradient(145deg, #ecf4ff, #dcecff); border-radius: 28px; }
-    .safety-visual::before { content: ""; position: absolute; width: 280px; height: 280px; border: 70px solid rgba(23,105,255,.08); border-radius: 50%; }
-    .lock-card { position: relative; width: min(330px, 100%); padding: 27px; background: #fff; border: 1px solid #d9e5f4; border-radius: 19px; box-shadow: var(--shadow); }
-    .lock-symbol { width: 58px; height: 58px; margin-bottom: 22px; display: grid; place-items: center; color: #fff; background: var(--blue); border-radius: 17px; font: 800 .76rem "Manrope", sans-serif; }
-    .lock-card h3 { margin-bottom: 8px; color: var(--navy); font: 700 1.12rem "Manrope", sans-serif; }
-    .lock-card p { color: var(--muted); font-size: .83rem; }
-    .permission { margin-top: 21px; padding-top: 17px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--line); color: var(--muted); font-size: .72rem; }
-    .permission span { padding: 5px 9px; color: var(--success); background: #e8fbf5; border-radius: 99px; font-weight: 700; }
-    .safety-copy h2 { margin: 12px 0 17px; font-size: clamp(2rem, 3.7vw, 3.2rem); line-height: 1.1; }
-    .safety-copy > p { color: var(--muted); }
-    .safety-list { margin-top: 27px; display: grid; gap: 14px; }
-    .safety-list li { display: grid; grid-template-columns: 32px 1fr; gap: 12px; align-items: start; list-style: none; color: var(--muted); font-size: .87rem; }
-    .safety-list b { width: 30px; height: 30px; display: grid; place-items: center; color: var(--success); background: #e8fbf5; border-radius: 9px; }
-    .safety-list strong { display: block; margin-bottom: 2px; color: var(--ink); }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .pricing-card { padding: 30px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); }
+    .pricing-card b { display: inline-block; margin-bottom: 16px; padding: 4px 12px; color: var(--accent-dark); background: #fdeadf; border-radius: 999px; font-size: .78rem; }
+    .pricing-card h3 { margin-bottom: 8px; font-size: 1.25rem; }
+    .pricing-card p { font-size: .95rem; }
+    .cta-strip { margin-top: 24px; padding: 26px 30px; display: flex; align-items: center; justify-content: space-between; gap: 24px; background: var(--sand); border-radius: var(--radius); }
+    .cta-strip strong { display: block; color: var(--ink); font: 700 1.2rem "Fraunces", serif; }
+    .cta-strip p { margin-top: 2px; font-size: .94rem; }
 
-    .faq { max-width: 850px; margin-inline: auto; }
-    .faq .section-head { text-align: center; margin-inline: auto; }
-    .faq-list { border-top: 1px solid var(--line); }
-    details { border-bottom: 1px solid var(--line); }
-    summary { position: relative; cursor: pointer; list-style: none; padding: 23px 48px 23px 0; color: var(--navy); font: 700 .98rem "Manrope", sans-serif; }
+    .faq-list { max-width: 820px; display: grid; gap: 12px; }
+    details { background: #fff; border: 1px solid var(--line); border-radius: 16px; }
+    summary { padding: 20px 56px 20px 24px; position: relative; color: var(--ink); font-weight: 600; cursor: pointer; list-style: none; }
     summary::-webkit-details-marker { display: none; }
-    summary::after { content: "+"; position: absolute; right: 5px; top: 17px; color: var(--blue); font: 500 1.6rem "Manrope", sans-serif; transition: transform .2s; }
-    details[open] summary::after { transform: rotate(45deg); }
-    details p { padding: 0 45px 23px 0; color: var(--muted); font-size: .88rem; }
+    summary::after { content: "+"; position: absolute; right: 22px; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; display: grid; place-items: center; background: var(--sand); border-radius: 50%; font-size: 1.2rem; line-height: 1; }
+    details[open] summary::after { content: "–"; background: var(--accent); color: #fff; }
+    details p { padding: 0 24px 22px; }
 
-    .closing { padding-top: 10px; padding-bottom: 105px; }
-    .closing-card { position: relative; overflow: hidden; padding: clamp(48px, 8vw, 86px) 28px; text-align: center; color: #fff; background: linear-gradient(135deg, var(--blue-dark), var(--blue) 58%, var(--cyan)); border-radius: 28px; box-shadow: 0 28px 75px rgba(23,105,255,.24); }
-    .closing-card::before, .closing-card::after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; }
-    .closing-card::before { width: 390px; height: 390px; left: -180px; top: -210px; }
-    .closing-card::after { width: 300px; height: 300px; right: -120px; bottom: -190px; }
-    .closing-card h2 { position: relative; max-width: 780px; margin: 0 auto 15px; color: #fff; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.08; }
-    .closing-card p { position: relative; max-width: 550px; margin: 0 auto 29px; color: rgba(255,255,255,.78); }
-    .closing-card .button { position: relative; color: var(--blue); background: #fff; }
-    .closing-card .button:hover { box-shadow: 0 15px 36px rgba(4,39,100,.22); }
-    .closing-email { position: relative; width: fit-content; margin: 18px auto 0; display: block; color: rgba(255,255,255,.8); font-size: .8rem; font-weight: 600; border-bottom: 1px solid rgba(255,255,255,.35); }
-    .closing-email:hover { color: #fff; border-color: #fff; }
+    .closing { padding-top: 24px; }
+    .closing-card { padding: 64px 32px; text-align: center; color: #d6e4de; background: var(--ink); border-radius: 36px; position: relative; overflow: hidden; }
+    .closing-card::before, .closing-card::after { content: ""; position: absolute; border-radius: 50%; background: var(--accent); opacity: .16; }
+    .closing-card::before { width: 320px; height: 320px; left: -110px; top: -150px; }
+    .closing-card::after { width: 240px; height: 240px; right: -70px; bottom: -120px; }
+    .closing-card > * { position: relative; }
+    .closing-card h2 { color: #fff; max-width: 620px; margin: 0 auto 14px; }
+    .closing-card .button { margin-top: 28px; }
+    .closing-email { display: block; margin-top: 18px; font-size: .9rem; color: #a9bfb6; }
 
-    footer { border-top: 1px solid var(--line); }
-    .footer-inner { min-height: 94px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
-    .footer-meta { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 18px; color: var(--muted); font-size: .76rem; }
-    .footer-meta a:hover { color: var(--blue); }
+    footer { padding: 44px 0 100px; }
+    .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+    .footer-meta { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: .86rem; color: var(--muted); }
+    .footer-meta a { text-decoration: none; }
+
     .mobile-contact { display: none; }
 
-    .js [data-reveal] { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+    .js [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .6s, transform .6s; }
     .js [data-reveal].visible { opacity: 1; transform: none; }
-    .support-person small.offline { color: var(--muted); }
-    .support-person small.offline::before { background: #f0a020; }
-    .footer-legal { color: var(--muted); font-size: .7rem; opacity: .85; }
-    a:focus-visible, summary:focus-visible { outline: 3px solid rgba(23,105,255,.45); outline-offset: 4px; border-radius: 6px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .js [data-reveal] { opacity: 1; transform: none; transition: none; } .button { transition: none; } }
 
     @media (max-width: 980px) {
-      .menu > a:not(.nav-button) { display: none; }
-      .hero { grid-template-columns: 1fr; padding-top: 68px; }
-      .hero-copy { max-width: 760px; }
-      .hero-visual { min-height: 470px; }
-      .services { grid-template-columns: repeat(2, 1fr); }
-      .steps { grid-template-columns: repeat(2, 1fr); }
-      .step:nth-child(2)::after { display: none; }
-      .safety-layout { grid-template-columns: 1fr; }
-      .safety-visual { order: 2; }
+      .hero { grid-template-columns: 1fr; padding-top: 36px; }
+      .hero-art { max-width: 520px; }
+      .services, .pricing-grid { grid-template-columns: 1fr 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .safety-layout { grid-template-columns: 1fr; gap: 36px; }
     }
-    @media (max-width: 720px) {
-      .wrap { width: min(100% - 28px, var(--max)); }
-      nav { min-height: 68px; }
-      .brand-text { font-size: .94rem; }
-      .nav-button { min-height: 39px; padding-inline: 13px; font-size: .75rem; }
-      .hero { padding-block: 56px 72px; }
-      h1 { font-size: clamp(2.65rem, 13vw, 4rem); }
-      .orb { width: 355px; height: 355px; }
-      .floating-note { right: 2px; }
-      .confidence-grid { grid-template-columns: 1fr; }
-      .services-action { align-items: stretch; flex-direction: column; }
-      .services-action .button { width: 100%; }
-      .confidence-item { padding-inline: 10px; border-right: 0; border-bottom: 1px solid var(--line); }
-      .confidence-item:last-child { border-bottom: 0; }
-      section { padding-block: 80px; }
-      .closing { padding-bottom: 80px; }
-      .footer-inner { padding-block: 28px 92px; flex-direction: column; align-items: flex-start; }
-      .footer-meta { justify-content: flex-start; }
-      .mobile-contact { position: fixed; z-index: 60; left: 12px; right: 12px; bottom: 12px; min-height: 52px; display: flex; align-items: center; justify-content: center; color: #fff; background: var(--blue); border-radius: 12px; box-shadow: 0 16px 38px rgba(23,105,255,.3); font-weight: 700; }
-    }
-    @media (max-width: 560px) {
-      .services, .steps { grid-template-columns: 1fr; }
-      .step:not(:last-child)::after { display: none; }
-      .service { min-height: auto; }
-      .hero-visual { min-height: 435px; }
-      .orb { width: 300px; height: 300px; }
-      .support-card { width: 96%; }
-      .floating-note { bottom: 9px; }
-      .hero-actions .button { width: 100%; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-      [data-reveal] { opacity: 1; transform: none; }
+    @media (max-width: 700px) {
+      section { padding: 60px 0; }
+      .menu a:not(.nav-button) { display: none; }
+      .services, .pricing-grid, .steps { grid-template-columns: 1fr; }
+      .process { border-radius: 28px; }
+      .cta-strip { flex-direction: column; align-items: flex-start; }
+      .mobile-contact { position: fixed; z-index: 60; left: 16px; right: 16px; bottom: 16px; display: flex; justify-content: center; padding: 15px; color: #fff; background: var(--accent); border-radius: 999px; font-weight: 600; text-decoration: none; box-shadow: 0 12px 30px rgba(15,42,36,.3); }
     }
   </style>
 </head>
@@ -291,78 +218,77 @@
   <header>
     <nav class="wrap" aria-label="Navegação principal">
       <a class="brand" href="#inicio" aria-label="TC Viana Tech — início">
-        <span class="brand-mark">TC</span>
-        <span class="brand-text">TC Viana <span>Tech</span></span>
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" fill="#0f2a24"/><path d="M19 17l24 15-10.5 2.6L28 45z" fill="#ee6a2d" stroke="#ee6a2d" stroke-width="2" stroke-linejoin="round"/><path d="M40 15a17 17 0 0 1 9 9M44 10a24 24 0 0 1 12 12" fill="none" stroke="#cfe9dd" stroke-width="3" stroke-linecap="round"/></svg>
+        <span>TC Viana <em>Tech</em></span>
       </a>
       <div class="menu">
         <a href="#servicos">Serviços</a>
         <a href="#processo">Como funciona</a>
+        <a href="#valores">Valores</a>
         <a href="#duvidas">Dúvidas</a>
-        <a class="nav-button" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site%20da%20TC%20Viana%20Tech%20e%20preciso%20de%20ajuda." target="_blank" rel="noopener">Falar no WhatsApp <span>→</span></a>
+        <a class="nav-button" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site%20da%20TC%20Viana%20Tech%20e%20preciso%20de%20ajuda." target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </nav>
   </header>
 
   <main id="conteudo">
     <section class="hero wrap" id="inicio">
-      <div class="hero-copy">
-        <span class="kicker">Suporte técnico remoto</span>
-        <h1>Tecnologia funcionando. <span>Você seguindo em frente.</span></h1>
-        <p>Resolvemos problemas de computador, internet, impressora e e-mail à distância — com atendimento humano, seguro e explicado sem complicação.</p>
+      <div>
+        <span class="kicker" id="kicker"><i></i><span id="status">Seg a sáb · 9h–20h</span></span>
+        <h1>Seu computador resolvido, <span>sem você sair de casa.</span></h1>
+        <p class="lead">Suporte técnico remoto para computador, internet, impressora e e-mail. Atendimento de gente de verdade, seguro e explicado sem complicação.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site.%20Meu%20problema%20%C3%A9%3A%20" target="_blank" rel="noopener">Conte o que aconteceu <span class="arrow">→</span></a>
-          <a class="button button-secondary" href="#servicos">Conhecer os serviços</a>
+          <a class="button button-primary" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site.%20Meu%20problema%20%C3%A9%3A%20" target="_blank" rel="noopener">Conte o que aconteceu →</a>
+          <a class="button button-ghost" href="#servicos">Ver serviços</a>
         </div>
         <a class="email-contact" href="mailto:tcviana.tech@gmail.com?subject=Contato%20pelo%20site%20TC%20Viana%20Tech&body=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%3A%20">Prefere e-mail? tcviana.tech@gmail.com</a>
-        <div class="hero-meta"><span>Atendimento remoto</span><span>Segunda a sábado</span><span>Você acompanha tudo</span></div>
+        <ul class="hero-points"><li>Remoto, para todo o Brasil</li><li>Você acompanha tudo</li><li>Valor combinado antes</li></ul>
       </div>
 
-      <div class="hero-visual" aria-label="Representação de um atendimento técnico remoto" data-reveal>
-        <div class="orb" aria-hidden="true"></div>
-        <div class="support-card">
-          <div class="support-head">
-            <div class="support-person"><span class="avatar">TC</span><span><strong>Suporte TC Viana</strong><small id="status">Seg a sáb · 9h–20h</small></span></div>
-            <span class="secure-label">sessão segura</span>
-          </div>
-          <div class="conversation">
-            <div class="bubble client">Meu computador ficou muito lento hoje.</div>
-            <div class="bubble tech">Vamos verificar juntos. Você acompanha todo o processo.</div>
-            <div class="diagnosis">
-              <div class="diagnosis-row"><i></i><span>Inicialização otimizada</span><b>feito</b></div>
-              <div class="diagnosis-row"><i></i><span>Programas indesejados</span><b>removidos</b></div>
-              <div class="diagnosis-row"><i></i><span>Atualizações verificadas</span><b>feito</b></div>
-            </div>
-          </div>
-        </div>
-        <div class="floating-note"><b>✓</b><span>Problema resolvido</span></div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 520 460" fill="none">
+          <circle cx="270" cy="230" r="205" fill="#f1e9db"/>
+          <circle cx="430" cy="82" r="38" fill="#cfe9dd"/>
+          <circle cx="62" cy="352" r="24" fill="#fdeadf"/>
+          <rect x="108" y="108" width="324" height="214" rx="18" fill="#0f2a24"/>
+          <rect x="124" y="124" width="292" height="182" rx="8" fill="#16382f"/>
+          <path d="M70 330h400l-18 24a14 14 0 0 1-11 6H99a14 14 0 0 1-11-6z" fill="#cdbfa6"/>
+          <rect x="222" y="330" width="96" height="8" rx="4" fill="#b8a98d"/>
+          <rect x="144" y="146" width="120" height="10" rx="5" fill="#2c5446"/>
+          <rect x="144" y="166" width="190" height="10" rx="5" fill="#2c5446"/>
+          <rect x="144" y="186" width="90" height="10" rx="5" fill="#2c5446"/>
+          <rect x="144" y="222" width="104" height="52" rx="10" fill="#cfe9dd"/>
+          <path d="M162 250l10 10 20-22" stroke="#0f2a24" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="262" y="222" width="130" height="52" rx="10" fill="#2c5446"/>
+          <rect x="278" y="240" width="70" height="8" rx="4" fill="#4d7a69"/>
+          <rect x="278" y="256" width="44" height="8" rx="4" fill="#4d7a69"/>
+          <path d="M356 150l62 38-26 6-14 28z" fill="#ee6a2d" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+          <rect x="26" y="48" width="196" height="76" rx="18" fill="#fff" stroke="#e4dac8" stroke-width="2"/>
+          <path d="M70 124l-6 22 28-22" fill="#fff" stroke="#e4dac8" stroke-width="2" stroke-linejoin="round"/>
+          <rect x="44" y="68" width="120" height="9" rx="4.5" fill="#0f2a24"/>
+          <rect x="44" y="88" width="152" height="9" rx="4.5" fill="#d9cdb8"/>
+          <circle cx="198" cy="72" r="5" fill="#1f9d6b"/>
+          <rect x="330" y="368" width="168" height="54" rx="27" fill="#fff" stroke="#e4dac8" stroke-width="2"/>
+          <circle cx="360" cy="395" r="15" fill="#1f9d6b"/>
+          <path d="M353 395l5 5 9-10" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="384" y="400" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#0f2a24">Resolvido!</text>
+        </svg>
       </div>
     </section>
 
-    <aside class="confidence" aria-label="Diferenciais do atendimento">
-      <div class="confidence-grid wrap">
-        <div class="confidence-item"><span class="confidence-icon">01</span><strong>Atendimento humano</strong><small>Conversa direta pelo WhatsApp</small></div>
-        <div class="confidence-item"><span class="confidence-icon">02</span><strong>Acesso autorizado</strong><small>Você mantém o controle da sessão</small></div>
-        <div class="confidence-item"><span class="confidence-icon">03</span><strong>Solução explicada</strong><small>Clareza antes, durante e depois</small></div>
-      </div>
-    </aside>
-
     <section class="wrap" id="servicos">
       <div class="section-head" data-reveal>
-        <span class="eyebrow">Soluções</span>
+        <span class="eyebrow">Serviços</span>
         <h2>O suporte certo para cada problema</h2>
         <p>Veja alguns dos problemas que podem ser resolvidos por atendimento remoto.</p>
       </div>
       <div class="services">
-        <article class="service" data-reveal><span class="service-icon">PC</span><h3>Computador lento</h3><p>Otimização, limpeza, inicialização e ajustes para recuperar o desempenho.</p></article>
-        <article class="service" data-reveal><span class="service-icon">NET</span><h3>Internet e Wi-Fi</h3><p>Configuração de rede, roteador, repetidor e solução de instabilidade.</p></article>
-        <article class="service" data-reveal><span class="service-icon">SEC</span><h3>Vírus e segurança</h3><p>Remoção de ameaças, pop-ups e programas que você não reconhece.</p></article>
-        <article class="service" data-reveal><span class="service-icon">PRN</span><h3>Impressora</h3><p>Instalação, drivers, configuração e correção de falhas de impressão.</p></article>
-        <article class="service" data-reveal><span class="service-icon">APP</span><h3>E-mail e programas</h3><p>Contas, aplicativos, atualizações e programas que deixaram de funcionar.</p></article>
-        <article class="service" data-reveal><span class="service-icon">BKP</span><h3>Backup e arquivos</h3><p>Organização, cópia de segurança e tentativa de recuperação de arquivos.</p></article>
-      </div>
-      <div class="services-action" data-reveal>
-        <div><strong>Precisa de ajuda com algum desses problemas?</strong><p>Conte o que está acontecendo e receba uma orientação inicial pelo WhatsApp.</p></div>
-        <a class="button button-primary" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site.%20Preciso%20de%20ajuda%20com%3A%20" target="_blank" rel="noopener">Pedir ajuda <span class="arrow">→</span></a>
+        <article class="service" data-reveal><div class="ico"><svg viewBox="0 0 32 32"><rect x="4" y="6" width="24" height="16" rx="3"/><path d="M11 27h10M16 22v5"/><path class="a" d="M10 15l4-4 3 3 5-5"/></svg></div><h3>Computador lento</h3><p>Otimização, limpeza, inicialização e ajustes para recuperar o desempenho.</p></article>
+        <article class="service" data-reveal><div class="ico"><svg viewBox="0 0 32 32"><path d="M4 12a17 17 0 0 1 24 0M8 16.5a11 11 0 0 1 16 0"/><path class="a" d="M12 21a5 5 0 0 1 8 0"/><circle class="a" cx="16" cy="25.5" r="1.2"/></svg></div><h3>Internet e Wi-Fi</h3><p>Configuração de rede, roteador, repetidor e solução de instabilidade.</p></article>
+        <article class="service" data-reveal><div class="ico"><svg viewBox="0 0 32 32"><path d="M16 4l10 4v8c0 6-4.2 10.4-10 12-5.8-1.6-10-6-10-12V8z"/><path class="a" d="M11.5 16l3.2 3.2 6-6.4"/></svg></div><h3>Vírus e segurança</h3><p>Remoção de ameaças, pop-ups e programas que você não reconhece.</p></article>
+        <article class="service" data-reveal><div class="ico"><svg viewBox="0 0 32 32"><path d="M9 12V5h14v7"/><rect x="4" y="12" width="24" height="10" rx="3"/><rect class="a" x="9" y="19" width="14" height="8" rx="1.5"/></svg></div><h3>Impressora</h3><p>Instalação, drivers, configuração e correção de falhas de impressão.</p></article>
+        <article class="service" data-reveal><div class="ico"><svg viewBox="0 0 32 32"><rect x="3" y="7" width="26" height="18" rx="3"/><path class="a" d="M4 10l12 9 12-9"/></svg></div><h3>E-mail e programas</h3><p>Contas, aplicativos, atualizações e programas que deixaram de funcionar.</p></article>
+        <article class="service" data-reveal><div class="ico"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="8" rx="10" ry="4"/><path d="M6 8v8c0 2.2 4.5 4 10 4s10-1.8 10-4V8"/><path class="a" d="M6 16v7c0 2.2 4.5 4 10 4s10-1.8 10-4v-7"/></svg></div><h3>Backup e arquivos</h3><p>Organização, cópia de segurança e tentativa de recuperação de arquivos.</p></article>
       </div>
     </section>
 
@@ -374,38 +300,58 @@
           <p>Sem formulário complicado e sem surpresa. Você sabe o que será feito antes do atendimento começar.</p>
         </div>
         <div class="steps">
-          <article class="step" data-reveal><span class="step-number">PASSO 01</span><h3>Envie uma mensagem</h3><p>Conte o problema e, se puder, mande uma foto ou print.</p></article>
-          <article class="step" data-reveal><span class="step-number">PASSO 02</span><h3>Receba a orientação</h3><p>Avaliamos o caso e explicamos a melhor forma de atendimento.</p></article>
-          <article class="step" data-reveal><span class="step-number">PASSO 03</span><h3>Autorize o acesso</h3><p>Quando necessário, você libera uma sessão remota temporária.</p></article>
-          <article class="step" data-reveal><span class="step-number">PASSO 04</span><h3>Teste a solução</h3><p>Validamos tudo com você e explicamos o que foi corrigido.</p></article>
+          <article class="step" data-reveal><h3>Envie uma mensagem</h3><p>Conte o problema e, se puder, mande uma foto ou print.</p></article>
+          <article class="step" data-reveal><h3>Receba a orientação</h3><p>Avaliamos o caso e explicamos a melhor forma de atendimento.</p></article>
+          <article class="step" data-reveal><h3>Autorize o acesso</h3><p>Quando necessário, você libera uma sessão remota temporária.</p></article>
+          <article class="step" data-reveal><h3>Teste a solução</h3><p>Validamos tudo com você e explicamos o que foi corrigido.</p></article>
         </div>
       </div>
     </section>
 
     <section class="wrap">
       <div class="safety-layout">
-        <div class="safety-visual" data-reveal>
-          <div class="lock-card">
-            <span class="lock-symbol">SEG</span>
-            <h3>Acesso remoto protegido</h3>
-            <p>A conexão acontece apenas depois da sua autorização e pode ser encerrada quando você quiser.</p>
-            <div class="permission"><strong>Status da sessão</strong><span>autorizada</span></div>
-          </div>
+        <div class="safety-art" data-reveal aria-hidden="true">
+          <svg viewBox="0 0 400 320" fill="none">
+            <rect x="40" y="52" width="320" height="200" rx="22" fill="#fff"/>
+            <path d="M40 74a22 22 0 0 1 22-22h276a22 22 0 0 1 22 22v18H40z" fill="#0f2a24"/>
+            <circle cx="64" cy="72" r="5" fill="#ee6a2d"/><circle cx="82" cy="72" r="5" fill="#e4dac8"/><circle cx="100" cy="72" r="5" fill="#e4dac8"/>
+            <path d="M200 120l44 17v34c0 26-18 44-44 53-26-9-44-27-44-53v-34z" fill="#cfe9dd" stroke="#0f2a24" stroke-width="5" stroke-linejoin="round"/>
+            <path d="M182 171l14 14 26-30" stroke="#0f2a24" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="258" y="214" width="84" height="30" rx="15" fill="#1f9d6b"/>
+            <text x="300" y="234" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#fff">autorizada</text>
+          </svg>
         </div>
-        <div class="safety-copy" data-reveal>
+        <div data-reveal>
           <span class="eyebrow">Segurança e transparência</span>
           <h2>Seu computador continua sob seu controle</h2>
-          <p>O atendimento remoto deve ser simples, mas nunca misterioso. Você acompanha a tela e recebe explicações claras em cada etapa.</p>
+          <p class="safety-intro">O atendimento remoto deve ser simples, mas nunca misterioso. Você acompanha a tela e recebe explicações claras em cada etapa.</p>
           <ul class="safety-list">
-            <li><b>✓</b><span><strong>Acesso temporário</strong>A sessão depende da sua autorização.</span></li>
-            <li><b>✓</b><span><strong>Acompanhamento em tempo real</strong>Você vê tudo o que está sendo realizado.</span></li>
-            <li><b>✓</b><span><strong>Alinhamento antecipado</strong>Serviço e valor são confirmados antes do início.</span></li>
+            <li><b>✓</b><div><strong>Acesso temporário</strong><span>A sessão depende da sua autorização.</span></div></li>
+            <li><b>✓</b><div><strong>Acompanhamento em tempo real</strong><span>Você vê tudo o que está sendo realizado.</span></div></li>
+            <li><b>✓</b><div><strong>Alinhamento antecipado</strong><span>Serviço e valor são confirmados antes do início.</span></div></li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="faq wrap" id="duvidas">
+    <section class="wrap" id="valores" style="padding-top:24px">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Valores e compromisso</span>
+        <h2>Você sabe quanto vai pagar antes de começar</h2>
+        <p>Cada caso é diferente, por isso o valor é informado depois de entender o problema — nunca depois do serviço.</p>
+      </div>
+      <div class="pricing-grid">
+        <article class="pricing-card" data-reveal><b>01</b><h3>Orientação inicial sem custo</h3><p>Conte o problema pelo WhatsApp e receba uma primeira avaliação, sem compromisso.</p></article>
+        <article class="pricing-card" data-reveal><b>02</b><h3>Valor combinado antes</h3><p>Serviço, valor e forma de pagamento são confirmados com você antes de qualquer acesso ao computador.</p></article>
+        <article class="pricing-card" data-reveal><b>03</b><h3>Sem surpresa</h3><p>Se for preciso peça ou visita presencial, você é avisado no diagnóstico e decide se segue.</p></article>
+      </div>
+      <div class="cta-strip" data-reveal>
+        <div><strong>Quer saber quanto custa o seu caso?</strong><p>Atendimento 100% remoto, para qualquer cidade do Brasil. Resposta de segunda a sábado, das 9h às 20h.</p></div>
+        <a class="button button-primary" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site.%20Quero%20saber%20o%20valor%20para%3A%20" target="_blank" rel="noopener">Pedir orçamento →</a>
+      </div>
+    </section>
+
+    <section class="wrap" id="duvidas" style="padding-top:24px">
       <div class="section-head" data-reveal>
         <span class="eyebrow">Perguntas frequentes</span>
         <h2>Informação clara antes de começar</h2>
@@ -415,6 +361,7 @@
         <details><summary>Todo problema pode ser resolvido à distância?</summary><p>Problemas de sistema, programas, e-mail, configuração e rede geralmente podem ser tratados remotamente. Se houver defeito físico ou necessidade de peça, isso será informado no diagnóstico.</p></details>
         <details><summary>Preciso entender de informática?</summary><p>Não. As orientações são passadas passo a passo, usando linguagem simples.</p></details>
         <details><summary>Quando o atendimento é realizado?</summary><p>O horário informado é de segunda a sábado, das 9h às 20h. A disponibilidade e o melhor horário para o atendimento são confirmados pelo WhatsApp.</p></details>
+        <details><summary>Em quais cidades vocês atendem?</summary><p>O atendimento é 100% remoto, então funciona em qualquer cidade do Brasil, desde que você tenha internet no equipamento.</p></details>
         <details><summary>Como o pagamento é combinado?</summary><p>O valor e as formas de pagamento são confirmados pelo WhatsApp antes do início do serviço.</p></details>
       </div>
     </section>
@@ -423,7 +370,7 @@
       <div class="closing-card" data-reveal>
         <h2>Vamos fazer sua tecnologia funcionar?</h2>
         <p>Explique o problema pelo WhatsApp e receba uma orientação inicial.</p>
-        <a class="button" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site%20da%20TC%20Viana%20Tech.%20Meu%20problema%20%C3%A9%3A%20" target="_blank" rel="noopener">Começar atendimento <span class="arrow">→</span></a>
+        <a class="button button-primary" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site%20da%20TC%20Viana%20Tech.%20Meu%20problema%20%C3%A9%3A%20" target="_blank" rel="noopener">Começar atendimento →</a>
         <a class="closing-email" href="mailto:tcviana.tech@gmail.com?subject=Contato%20pelo%20site%20TC%20Viana%20Tech&body=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%3A%20">ou envie um e-mail para tcviana.tech@gmail.com</a>
       </div>
     </section>
@@ -431,8 +378,8 @@
 
   <footer>
     <div class="footer-inner wrap">
-      <a class="brand" href="#inicio"><span class="brand-mark">TC</span><span class="brand-text">TC Viana <span>Tech</span></span></a>
-      <div class="footer-meta"><a href="mailto:tcviana.tech@gmail.com">tcviana.tech@gmail.com</a><span>Seg a sáb · 9h–20h</span><span>© <span id="year"></span> TC Viana Tech</span><span class="footer-legal">TCVIANA TECH LTDA · CNPJ 66.766.206/0001-35</span></div>
+      <a class="brand" href="#inicio"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" fill="#0f2a24"/><path d="M19 17l24 15-10.5 2.6L28 45z" fill="#ee6a2d" stroke="#ee6a2d" stroke-width="2" stroke-linejoin="round"/><path d="M40 15a17 17 0 0 1 9 9M44 10a24 24 0 0 1 12 12" fill="none" stroke="#cfe9dd" stroke-width="3" stroke-linecap="round"/></svg><span>TC Viana <em>Tech</em></span></a>
+      <div class="footer-meta"><a href="mailto:tcviana.tech@gmail.com">tcviana.tech@gmail.com</a><span>Seg a sáb · 9h–20h</span><span>© <span id="year"></span> TC Viana Tech</span><span>TCVIANA TECH LTDA · CNPJ 66.766.206/0001-35</span></div>
     </div>
   </footer>
 
@@ -468,7 +415,7 @@
       const hour = Number(parts.find((p) => p.type === 'hour').value);
       const open = day !== 'Sun' && hour >= 9 && hour < 20;
       status.textContent = open ? 'Disponível agora' : 'Fora do horário · responde a partir das 9h';
-      status.classList.toggle('offline', !open);
+      document.getElementById('kicker').classList.toggle('offline', !open);
     } catch (e) { /* mantém o horário estático */ }
   </script>
 </body>
