@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Suporte técnico remoto para computadores, Wi-Fi, impressoras, e-mail e segurança digital. Atendimento em Belo Horizonte e região metropolitana, pelo WhatsApp, de segunda a sábado.">
+  <meta name="description" content="Suporte técnico, redes, configuração e montagem de computadores em Belo Horizonte e região metropolitana. Atendimento pelo WhatsApp, de segunda a sábado.">
   <meta name="theme-color" content="#0f2a24">
   <link rel="canonical" href="https://tcvianatech.com.br/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -14,14 +14,13 @@
   <meta property="og:site_name" content="TC Viana Tech">
   <meta property="og:url" content="https://tcvianatech.com.br/">
   <meta property="og:title" content="TC Viana Tech — Suporte técnico remoto">
-  <meta property="og:description" content="Computador lento, Wi-Fi, impressora, vírus ou e-mail? Resolvemos à distância, com atendimento humano e seguro.">
+  <meta property="og:description" content="Computador lento, Wi-Fi, impressora, vírus ou e-mail? Resolvemos com atendimento humano e seguro em Belo Horizonte e região.">
   <meta property="og:image" content="https://tcvianatech.com.br/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="TC Viana Tech — Suporte técnico remoto">
   <meta name="twitter:card" content="summary_large_image">
   <title>TC Viana Tech — Suporte técnico remoto para PC, Wi-Fi e impressora</title>
-  <script>document.documentElement.classList.add('js');</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -63,158 +62,172 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
+      --bg: #eef3f1;
+      --paper: #ffffff;
       --ink: #0f2a24;
-      --ink-2: #16382f;
-      --text: #3d4f49;
-      --muted: #6b7c76;
-      --cream: #faf6ef;
-      --sand: #f1e9db;
-      --line: #e4dac8;
-      --accent: #ee6a2d;
-      --accent-dark: #d4561c;
-      --mint: #cfe9dd;
-      --radius: 20px;
+      --text: #3a4d47;
+      --muted: #66786f;
+      --line: #d3dedb;
+      --go: #0e8f55;
+      --go-dark: #0a6f42;
+      --wait: #f2a93b;
+      --cursor: #ee6a2d;
+      --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+      --body: "Figtree", "Segoe UI", system-ui, sans-serif;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
-    body { margin: 0; background: var(--cream); color: var(--text); font: 400 1rem/1.65 "Inter", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-    h1, h2, h3 { margin: 0; color: var(--ink); font-family: "Fraunces", Georgia, serif; font-weight: 700; letter-spacing: -.02em; line-height: 1.12; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 1.0625rem/1.6 var(--body); -webkit-font-smoothing: antialiased; }
+    h1, h2, h3 { margin: 0; color: var(--ink); font-family: var(--display); letter-spacing: -.025em; text-wrap: balance; }
     p { margin: 0; }
     a { color: inherit; }
     svg { display: block; }
-    .wrap { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
-    .skip { position: absolute; left: -999px; top: 8px; z-index: 100; padding: 10px 16px; background: var(--ink); color: #fff; border-radius: 8px; }
+    .wrap { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+    .skip { position: absolute; left: -999px; top: 8px; z-index: 100; padding: 10px 16px; color: #fff; background: var(--ink); border-radius: 8px; }
     .skip:focus { left: 8px; }
-    :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    :focus-visible { outline: 3px solid var(--go); outline-offset: 3px; }
 
-    header { position: sticky; top: 0; z-index: 50; background: rgba(250,246,239,.88); backdrop-filter: blur(12px); border-bottom: 1px solid transparent; transition: border-color .2s; }
-    header.scrolled { border-color: var(--line); }
-    nav { height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; color: var(--ink); font: 700 1.2rem "Fraunces", serif; letter-spacing: -.02em; }
-    .brand svg { width: 38px; height: 38px; flex: none; }
-    .brand em { font-style: normal; color: var(--accent); }
-    .menu { display: flex; align-items: center; gap: 30px; font-size: .92rem; font-weight: 500; }
-    .menu a { text-decoration: none; color: var(--text); }
-    .menu a:hover { color: var(--ink); }
-    .menu .nav-button { padding: 11px 20px; color: #fff; background: var(--ink); border-radius: 999px; font-weight: 600; transition: background .2s; }
-    .menu .nav-button:hover { background: var(--ink-2); color: #fff; }
+    /* Header */
+    header { position: sticky; top: 0; z-index: 50; background: rgba(238,243,241,.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+    nav { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; color: var(--ink); font: 800 1.2rem var(--display); letter-spacing: -.03em; }
+    .brand svg { width: 36px; height: 36px; flex: none; }
+    .menu { display: flex; align-items: center; gap: 28px; font-size: .95rem; font-weight: 500; }
+    .menu a { text-decoration: none; }
+    .menu a:hover { color: var(--go-dark); }
 
-    .button { display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; border-radius: 999px; border: 2px solid transparent; font: 600 .98rem "Inter", sans-serif; text-decoration: none; transition: transform .2s, background .2s, box-shadow .2s; }
-    .button:hover { transform: translateY(-2px); }
-    .button-primary { color: #fff; background: var(--accent); box-shadow: 0 10px 26px rgba(238,106,45,.32); }
-    .button-primary:hover { background: var(--accent-dark); }
-    .button-ghost { color: var(--ink); border-color: var(--ink); background: transparent; }
-    .button-ghost:hover { background: var(--ink); color: #fff; }
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 26px; color: #fff; background: var(--go); border: 2px solid var(--go); border-radius: 14px; font: 700 1rem var(--body); text-decoration: none; transition: background .15s, border-color .15s; }
+    .btn:hover { background: var(--go-dark); border-color: var(--go-dark); }
+    .btn-small { min-height: 44px; padding: 0 20px; font-size: .95rem; }
+    .btn-line { color: var(--ink); background: transparent; border-color: var(--ink); }
+    .btn-line:hover { color: #fff; background: var(--ink); border-color: var(--ink); }
+    .btn svg { width: 20px; height: 20px; fill: currentColor; }
 
-    .hero { padding: 64px 0 88px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
-    .kicker { display: inline-flex; align-items: center; gap: 9px; padding: 7px 14px; color: var(--ink); background: var(--mint); border-radius: 999px; font-size: .8rem; font-weight: 600; }
-    .kicker i { width: 8px; height: 8px; background: #1f9d6b; border-radius: 50%; box-shadow: 0 0 0 4px rgba(31,157,107,.2); }
-    .kicker.offline i { background: #b9a98f; box-shadow: 0 0 0 4px rgba(185,169,143,.25); }
-    h1 { margin: 22px 0 20px; font-size: clamp(2.5rem, 5.4vw, 4.2rem); }
-    h1 span { color: var(--accent); font-style: italic; }
-    .hero p.lead { max-width: 520px; font-size: 1.12rem; }
-    .hero-actions { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px; }
-    .email-contact { margin-top: 18px; display: inline-block; font-size: .9rem; color: var(--muted); }
-    .hero-points { margin: 34px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px 26px; font-size: .88rem; font-weight: 500; color: var(--ink); }
-    .hero-points li { display: flex; align-items: center; gap: 8px; }
-    .hero-points li::before { content: ""; width: 18px; height: 18px; background: var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3.2L15 6.8' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat; border-radius: 50%; }
-    .hero-art { position: relative; }
-    .hero-main { display: block; width: 100%; height: auto; aspect-ratio: 5 / 4; object-fit: cover; object-position: 40% 50%; border-radius: 32px; box-shadow: 0 30px 60px rgba(15,42,36,.18); }
-    .hero-badge { position: absolute; right: -10px; bottom: 28px; display: flex; align-items: center; gap: 10px; padding: 12px 20px 12px 12px; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 999px; font-size: .86rem; font-weight: 600; box-shadow: 0 14px 30px rgba(15,42,36,.14); }
-    .hero-badge i { width: 28px; height: 28px; display: grid; place-items: center; color: #fff; background: #1f9d6b; border-radius: 50%; font-style: normal; font-size: .8rem; }
-    .hero-photo { position: absolute; left: -22px; bottom: -26px; width: 31%; margin: 0; }
-    .hero-photo img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: 50% 40%; border-radius: 50%; border: 6px solid var(--cream); box-shadow: 0 16px 36px rgba(15,42,36,.22); }
-    .hero-photo figcaption { margin: -14px auto 0; position: relative; width: max-content; padding: 6px 14px; color: #fff; background: var(--ink); border-radius: 999px; font-size: .74rem; font-weight: 600; }
+    /* Hero */
+    .hero { padding: 56px 0 72px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 56px; align-items: center; }
+    h1 { font-size: clamp(2.5rem, 5.2vw, 4.3rem); font-weight: 800; line-height: 1.02; letter-spacing: -.04em; }
+    .lead { margin-top: 24px; max-width: 30em; font-size: 1.2rem; }
+    .hero-actions { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-facts { margin: 36px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; color: var(--ink); font-weight: 500; }
+    .hero-facts li { display: flex; align-items: center; gap: 12px; }
+    .hero-facts li::before { content: ""; width: 20px; height: 2px; background: var(--go); flex: none; }
+    .open-now { margin-top: 16px; display: inline-flex; align-items: center; gap: 9px; font-size: .92rem; color: var(--muted); }
+    .open-now i { width: 9px; height: 9px; background: var(--go); border-radius: 50%; }
+    .open-now.offline i { background: #a8b6b0; }
 
+    .stage { position: relative; }
+    .stage > img { display: block; width: 100%; aspect-ratio: 5 / 4.4; object-fit: cover; object-position: 8% 60%; border-radius: 28px; }
+    .session { position: absolute; left: -36px; bottom: -32px; width: min(360px, 82%); background: var(--paper); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 24px 60px rgba(15,42,36,.2); overflow: hidden; }
+    .session-head { padding: 13px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; color: #fff; background: var(--ink); font-size: .85rem; font-weight: 600; }
+    .session-head span:first-child { display: inline-flex; align-items: center; gap: 8px; }
+    .session-head i { width: 8px; height: 8px; background: #3ddc97; border-radius: 50%; }
+    .session-head small { font-size: .76rem; font-weight: 500; opacity: .7; }
+    .session ul { margin: 0; padding: 6px 18px; list-style: none; }
+    .session li { padding: 12px 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); color: var(--ink); font-weight: 600; font-size: .95rem; }
+    .session li:last-child { border-bottom: 0; }
+    .chip { flex: none; padding: 3px 11px; border-radius: 999px; color: #5c3b00; background: #fde6bd; font-size: .8rem; font-weight: 700; }
+    .chip::after { content: "pendente"; }
+    li.checking .chip { background: var(--wait); color: #3d2700; }
+    li.checking .chip::after { content: "verificando"; }
+    li.done .chip { color: #fff; background: var(--go); }
+    li.done .chip::after { content: "resolvido"; }
+    .session-foot { padding: 11px 18px; background: #f5f9f7; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
+    .cursor { position: absolute; z-index: 2; right: 30%; top: 46%; width: 38px; height: 38px; filter: drop-shadow(0 6px 10px rgba(15,42,36,.35)); }
+
+    /* Sections */
     section { padding: 88px 0; }
-    .section-head { max-width: 640px; margin-bottom: 48px; }
-    .eyebrow { display: block; margin-bottom: 14px; color: var(--accent-dark); font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-    h2 { font-size: clamp(2rem, 3.8vw, 2.9rem); }
-    .section-head p { margin-top: 16px; font-size: 1.05rem; }
+    .head { max-width: 40rem; margin-bottom: 44px; }
+    h2 { font-size: clamp(2rem, 3.8vw, 3rem); font-weight: 800; line-height: 1.06; }
+    .head p { margin-top: 16px; }
 
-    .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .service { padding: 30px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); transition: transform .25s, box-shadow .25s; }
-    .service:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(15,42,36,.09); }
-    .service .ico { width: 56px; height: 56px; margin-bottom: 22px; display: grid; place-items: center; background: var(--sand); border-radius: 16px; }
-    .service .ico svg { width: 30px; height: 30px; fill: none; stroke: var(--ink); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-    .service .ico svg .a { stroke: var(--accent); }
-    .service h3 { margin-bottom: 8px; font-size: 1.28rem; }
-    .service p { font-size: .95rem; }
+    /* Problems list */
+    .groups { display: grid; grid-template-columns: 1.25fr 1fr; gap: 56px; align-items: start; }
+    .group h3 { padding-bottom: 14px; border-bottom: 2px solid var(--ink); font-size: 1.15rem; font-weight: 700; }
+    .group > p { margin-top: 12px; font-size: .95rem; color: var(--muted); }
+    .group ul { margin: 0; padding: 0; list-style: none; }
+    .group li { padding: 20px 0; display: grid; gap: 4px; border-bottom: 1px solid var(--line); }
+    .group li strong { color: var(--ink); font: 700 1.2rem var(--display); letter-spacing: -.02em; }
+    .group li span { font-size: .98rem; }
 
-    .process { background: var(--ink); color: #c9d8d2; border-radius: 40px; width: min(1280px, calc(100% - 24px)); margin-inline: auto; }
+    /* Process (dark) */
+    .process { color: #bcd0c9; background: var(--ink); }
     .process h2, .process h3 { color: #fff; }
-    .process .eyebrow { color: #f6a77e; }
-    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; counter-reset: step; }
-    .step { padding: 28px 24px 26px; background: var(--ink-2); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); }
-    .step::before { counter-increment: step; content: "0" counter(step); display: block; margin-bottom: 26px; color: var(--accent); font: 700 2.4rem "Fraunces", serif; line-height: 1; }
-    .step h3 { margin-bottom: 8px; font-size: 1.15rem; }
-    .step p { font-size: .92rem; }
+    .process .head p { color: #bcd0c9; }
+    .steps { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; counter-reset: step; }
+    .steps li { padding: 0 28px 0 0; counter-increment: step; }
+    .steps li::before { content: counter(step); width: 44px; height: 44px; margin-bottom: 22px; display: grid; place-items: center; color: var(--ink); background: #3ddc97; border-radius: 50%; font: 800 1.15rem var(--display); }
+    .steps li:not(:last-child) { position: relative; }
+    .steps li:not(:last-child)::after { content: ""; position: absolute; top: 22px; left: 56px; right: 12px; height: 2px; background: rgba(255,255,255,.18); }
+    .steps h3 { margin-bottom: 8px; font-size: 1.25rem; }
+    .steps p { font-size: .98rem; }
 
-    .safety-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: center; }
-    .safety-art { padding: 28px; background: var(--mint); border-radius: 32px; }
-    .safety-art svg { width: 100%; height: auto; }
-    .safety-intro { margin-top: 16px; font-size: 1.05rem; }
-    .safety-list { margin: 28px 0 0; padding: 0; list-style: none; display: grid; gap: 18px; }
-    .safety-list li { display: grid; grid-template-columns: 40px 1fr; gap: 16px; align-items: start; }
-    .safety-list b { width: 40px; height: 40px; display: grid; place-items: center; color: #fff; background: var(--ink); border-radius: 12px; }
-    .safety-list strong { display: block; color: var(--ink); font-weight: 600; }
-    .safety-list span { font-size: .94rem; }
+    /* Safety */
+    .safety { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .safety dl { margin: 0; display: grid; gap: 0; }
+    .safety dt { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--ink); font: 700 1.2rem var(--display); letter-spacing: -.02em; }
+    .safety dt:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+    .safety dd { margin: 6px 0 0; }
 
-    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .pricing-card { padding: 30px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); }
-    .pricing-card b { display: inline-block; margin-bottom: 16px; padding: 4px 12px; color: var(--accent-dark); background: #fdeadf; border-radius: 999px; font-size: .78rem; }
-    .pricing-card h3 { margin-bottom: 8px; font-size: 1.25rem; }
-    .pricing-card p { font-size: .95rem; }
-    .cta-strip { margin-top: 24px; padding: 26px 30px; display: flex; align-items: center; justify-content: space-between; gap: 24px; background: var(--sand); border-radius: var(--radius); }
-    .cta-strip strong { display: block; color: var(--ink); font: 700 1.2rem "Fraunces", serif; }
-    .cta-strip p { margin-top: 2px; font-size: .94rem; }
+    /* Prices */
+    .terms { padding: 0; margin: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 2px solid var(--ink); }
+    .terms li { padding: 28px 32px 8px 0; }
+    .terms li + li { padding-left: 32px; border-left: 1px solid var(--line); }
+    .terms h3 { margin-bottom: 10px; font-size: 1.35rem; font-weight: 700; }
+    .terms-cta { margin-top: 36px; padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; background: var(--paper); border: 1px solid var(--line); border-radius: 18px; }
+    .terms-cta strong { display: block; color: var(--ink); font: 700 1.3rem var(--display); letter-spacing: -.02em; }
 
-    .faq-list { max-width: 820px; display: grid; gap: 12px; }
-    details { background: #fff; border: 1px solid var(--line); border-radius: 16px; }
-    summary { padding: 20px 56px 20px 24px; position: relative; color: var(--ink); font-weight: 600; cursor: pointer; list-style: none; }
+    /* FAQ */
+    .faq { max-width: 52rem; }
+    details { border-top: 1px solid var(--line); }
+    details:last-child { border-bottom: 1px solid var(--line); }
+    summary { padding: 22px 48px 22px 0; position: relative; color: var(--ink); font: 700 1.15rem var(--display); letter-spacing: -.015em; cursor: pointer; list-style: none; }
     summary::-webkit-details-marker { display: none; }
-    summary::after { content: "+"; position: absolute; right: 22px; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; display: grid; place-items: center; background: var(--sand); border-radius: 50%; font-size: 1.2rem; line-height: 1; }
-    details[open] summary::after { content: "–"; background: var(--accent); color: #fff; }
-    details p { padding: 0 24px 22px; }
+    summary::after { content: ""; position: absolute; right: 6px; top: 50%; width: 11px; height: 11px; border-right: 2.5px solid var(--ink); border-bottom: 2.5px solid var(--ink); transform: translateY(-70%) rotate(45deg); transition: transform .2s; }
+    details[open] summary::after { transform: translateY(-30%) rotate(-135deg); }
+    details p { padding: 0 48px 24px 0; max-width: 42rem; }
 
+    /* Closing */
     .closing { padding-top: 24px; }
-    .closing-card { padding: 64px 32px; text-align: center; color: #d6e4de; background: var(--ink); border-radius: 36px; position: relative; overflow: hidden; }
-    .closing-card::before, .closing-card::after { content: ""; position: absolute; border-radius: 50%; background: var(--accent); opacity: .16; }
-    .closing-card::before { width: 320px; height: 320px; left: -110px; top: -150px; }
-    .closing-card::after { width: 240px; height: 240px; right: -70px; bottom: -120px; }
-    .closing-card > * { position: relative; }
-    .closing-card h2 { color: #fff; max-width: 620px; margin: 0 auto 14px; }
-    .closing-card .button { margin-top: 28px; }
-    .closing-email { display: block; margin-top: 18px; font-size: .9rem; color: #a9bfb6; }
+    .closing-band { padding: 56px 48px; display: grid; grid-template-columns: auto 1fr auto; gap: 36px; align-items: center; color: #d6efe3; background: var(--go-dark); border-radius: 28px; }
+    .closing-band img { width: 112px; height: 112px; object-fit: cover; object-position: 50% 35%; border-radius: 50%; border: 4px solid rgba(255,255,255,.35); }
+    .closing-band h2 { color: #fff; font-size: clamp(1.8rem, 3.2vw, 2.5rem); }
+    .closing-band p { margin-top: 10px; }
+    .closing-band .btn { color: var(--ink); background: #fff; border-color: #fff; }
+    .closing-band .btn:hover { color: #fff; background: var(--ink); border-color: var(--ink); }
+    .closing-mail { grid-column: 2 / -1; margin-top: -14px; font-size: .92rem; }
 
-    footer { padding: 44px 0 100px; }
-    .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
-    .footer-meta { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: .86rem; color: var(--muted); }
+    footer { padding: 36px 0 104px; border-top: 1px solid var(--line); }
+    .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
+    .footer-meta { display: flex; flex-wrap: wrap; gap: 6px 22px; color: var(--muted); font-size: .88rem; }
     .footer-meta a { text-decoration: none; }
 
     .mobile-contact { display: none; }
 
-    .js [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .6s, transform .6s; }
-    .js [data-reveal].visible { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .js [data-reveal] { opacity: 1; transform: none; transition: none; } .button { transition: none; } }
-
-    @media (max-width: 980px) {
-      .hero { grid-template-columns: 1fr; padding-top: 36px; }
-      .hero-art { max-width: 520px; }
-      .services, .pricing-grid { grid-template-columns: 1fr 1fr; }
-      .steps { grid-template-columns: 1fr 1fr; }
-      .safety-layout { grid-template-columns: 1fr; gap: 36px; }
+    @media (max-width: 1000px) {
+      .hero { grid-template-columns: 1fr; gap: 64px; }
+      .stage { margin-bottom: 36px; }
+      .groups, .safety { grid-template-columns: 1fr; gap: 48px; }
+      .steps { grid-template-columns: 1fr 1fr; row-gap: 40px; }
+      .steps li:nth-child(2)::after { display: none; }
+      .closing-band { grid-template-columns: 1fr; text-align: left; padding: 40px 28px; }
+      .closing-mail { grid-column: 1; margin-top: 0; }
     }
     @media (max-width: 700px) {
       section { padding: 60px 0; }
-      .menu a:not(.nav-button) { display: none; }
-      .services, .pricing-grid, .steps { grid-template-columns: 1fr; }
-      .process { border-radius: 28px; }
-      .cta-strip { flex-direction: column; align-items: flex-start; }
-      .mobile-contact { position: fixed; z-index: 60; left: 16px; right: 16px; bottom: 16px; display: flex; justify-content: center; padding: 15px; color: #fff; background: var(--accent); border-radius: 999px; font-weight: 600; text-decoration: none; box-shadow: 0 12px 30px rgba(15,42,36,.3); }
+      .hero { padding-top: 32px; }
+      .menu a { display: none; }
+      .session { left: 12px; bottom: -40px; }
+      .steps { grid-template-columns: 1fr; }
+      .steps li::after { display: none; }
+      .terms { grid-template-columns: 1fr; }
+      .terms li, .terms li + li { padding: 24px 0 8px; border-left: 0; }
+      .terms li + li { border-top: 1px solid var(--line); }
+      .terms-cta { flex-direction: column; align-items: flex-start; }
+      .mobile-contact { position: fixed; z-index: 60; left: 16px; right: 16px; bottom: 16px; min-height: 54px; display: flex; align-items: center; justify-content: center; color: #fff; background: var(--go); border-radius: 14px; font-weight: 700; text-decoration: none; box-shadow: 0 12px 30px rgba(15,42,36,.3); }
     }
   </style>
 </head>
@@ -225,14 +238,14 @@
     <nav class="wrap" aria-label="Navegação principal">
       <a class="brand" href="#inicio" aria-label="TC Viana Tech — início">
         <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" fill="#0f2a24"/><path d="M19 17l24 15-10.5 2.6L28 45z" fill="#ee6a2d" stroke="#ee6a2d" stroke-width="2" stroke-linejoin="round"/><path d="M40 15a17 17 0 0 1 9 9M44 10a24 24 0 0 1 12 12" fill="none" stroke="#cfe9dd" stroke-width="3" stroke-linecap="round"/></svg>
-        <span>TC Viana <em>Tech</em></span>
+        <span>TC Viana Tech</span>
       </a>
       <div class="menu">
         <a href="#servicos">Serviços</a>
         <a href="#processo">Como funciona</a>
         <a href="#valores">Valores</a>
         <a href="#duvidas">Dúvidas</a>
-        <a class="nav-button" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site%20da%20TC%20Viana%20Tech%20e%20preciso%20de%20ajuda." target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-small" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site%20da%20TC%20Viana%20Tech%20e%20preciso%20de%20ajuda." target="_blank" rel="noopener">Chamar no WhatsApp</a>
       </div>
     </nav>
   </header>
@@ -240,107 +253,118 @@
   <main id="conteudo">
     <section class="hero wrap" id="inicio">
       <div>
-        <span class="kicker" id="kicker"><i></i><span id="status">Seg a sáb · 9h–20h</span></span>
-        <h1>Seu computador resolvido, <span>sem você sair de casa.</span></h1>
-        <p class="lead">Suporte técnico para computador, internet, impressora e e-mail, além de redes, configuração e montagem de equipamentos, em Belo Horizonte e região metropolitana. Atendimento de gente de verdade, seguro e explicado sem complicação.</p>
+        <h1>Seu computador volta a funcionar. Você acompanha tudo.</h1>
+        <p class="lead">Suporte técnico, redes, configuração e montagem de computadores em Belo Horizonte e região metropolitana. Atendimento de gente de verdade, sem complicação.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site.%20Meu%20problema%20%C3%A9%3A%20" target="_blank" rel="noopener">Conte o que aconteceu →</a>
-          <a class="button button-ghost" href="#servicos">Ver serviços</a>
+          <a class="btn" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site.%20Meu%20problema%20%C3%A9%3A%20" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.1 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.6.3.1.1.1.6-.1 1.2z"/></svg>
+            Contar meu problema
+          </a>
+          <a class="btn btn-line" href="#servicos">Ver o que resolvemos</a>
         </div>
-        <a class="email-contact" href="mailto:tcviana.tech@gmail.com?subject=Contato%20pelo%20site%20TC%20Viana%20Tech&body=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%3A%20">Prefere e-mail? tcviana.tech@gmail.com</a>
-        <ul class="hero-points"><li>Belo Horizonte e região</li><li>Você acompanha tudo</li><li>Valor combinado antes</li></ul>
+        <ul class="hero-facts">
+          <li>Valor combinado antes de começar</li>
+          <li>Você vê tudo o que é feito na tela</li>
+          <li>Segunda a sábado, das 9h às 20h</li>
+        </ul>
+        <p class="open-now" id="open-now"><i></i><span id="status">Atendimento de segunda a sábado</span></p>
       </div>
 
-      <div class="hero-art">
-        <img class="hero-main" src="notebook.jpg" width="1000" height="667" alt="Mãos digitando em um notebook sobre uma mesa clara" fetchpriority="high">
-        <figure class="hero-photo"><img src="suporte.jpg" width="900" height="600" alt="Atendente de suporte técnico sorrindo, usando headset"><figcaption>Atendimento humano</figcaption></figure>
-        <div class="hero-badge"><i>✓</i> Resolvido!</div>
-      </div></section>
+      <div class="stage">
+        <img src="notebook.jpg" width="1000" height="667" alt="Mãos digitando em um notebook sobre uma mesa clara" fetchpriority="high">
+        <svg class="cursor" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 4l28 17-12 3-6 12z" fill="#ee6a2d" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg>
+        <div class="session" id="session" role="img" aria-label="Exemplo de atendimento: três problemas do computador sendo resolvidos">
+          <div class="session-head"><span><i></i>Sessão remota</span><small>autorizada por você</small></div>
+          <ul>
+            <li><span>Inicialização lenta</span><b class="chip"></b></li>
+            <li><span>Programas indesejados</span><b class="chip"></b></li>
+            <li><span>Atualizações do sistema</span><b class="chip"></b></li>
+          </ul>
+          <div class="session-foot">Exemplo ilustrativo de atendimento</div>
+        </div>
+      </div>
+    </section>
 
     <section class="wrap" id="servicos">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Serviços</span>
-        <h2>O suporte certo para cada problema</h2>
-        <p>Suporte técnico para o dia a dia e também serviços de rede, configuração e montagem de equipamentos.</p>
+      <div class="head">
+        <h2>Diga o que está acontecendo. A gente resolve.</h2>
+        <p>Os problemas mais comuns, nas palavras de quem chama.</p>
       </div>
-      <div class="services">
-        <article class="service" data-reveal><div class="ico"><svg viewBox="0 0 32 32"><rect x="4" y="6" width="24" height="16" rx="3"/><path d="M11 27h10M16 22v5"/><path class="a" d="M10 15l4-4 3 3 5-5"/></svg></div><h3>Computador lento</h3><p>Otimização, limpeza, inicialização e ajustes para recuperar o desempenho.</p></article>
-        <article class="service" data-reveal><div class="ico"><svg viewBox="0 0 32 32"><path d="M4 12a17 17 0 0 1 24 0M8 16.5a11 11 0 0 1 16 0"/><path class="a" d="M12 21a5 5 0 0 1 8 0"/><circle class="a" cx="16" cy="25.5" r="1.2"/></svg></div><h3>Internet e Wi-Fi</h3><p>Configuração de rede, roteador, repetidor e solução de instabilidade.</p></article>
-        <article class="service" data-reveal><div class="ico"><svg viewBox="0 0 32 32"><path d="M16 4l10 4v8c0 6-4.2 10.4-10 12-5.8-1.6-10-6-10-12V8z"/><path class="a" d="M11.5 16l3.2 3.2 6-6.4"/></svg></div><h3>Vírus e segurança</h3><p>Remoção de ameaças, pop-ups e programas que você não reconhece.</p></article>
-        <article class="service" data-reveal><div class="ico"><svg viewBox="0 0 32 32"><path d="M9 12V5h14v7"/><rect x="4" y="12" width="24" height="10" rx="3"/><rect class="a" x="9" y="19" width="14" height="8" rx="1.5"/></svg></div><h3>Impressora</h3><p>Instalação, drivers, configuração e correção de falhas de impressão.</p></article>
-        <article class="service" data-reveal><div class="ico"><svg viewBox="0 0 32 32"><rect x="3" y="7" width="26" height="18" rx="3"/><path class="a" d="M4 10l12 9 12-9"/></svg></div><h3>E-mail e programas</h3><p>Contas, aplicativos, atualizações e programas que deixaram de funcionar.</p></article>
-        <article class="service" data-reveal><div class="ico"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="8" rx="10" ry="4"/><path d="M6 8v8c0 2.2 4.5 4 10 4s10-1.8 10-4V8"/><path class="a" d="M6 16v7c0 2.2 4.5 4 10 4s10-1.8 10-4v-7"/></svg></div><h3>Backup e arquivos</h3><p>Organização, cópia de segurança e tentativa de recuperação de arquivos.</p></article>
-        <article class="service" data-reveal><div class="ico"><svg viewBox="0 0 32 32"><rect x="12" y="4" width="8" height="7" rx="1.5"/><rect x="3" y="21" width="8" height="7" rx="1.5"/><rect class="a" x="21" y="21" width="8" height="7" rx="1.5"/><path d="M16 11v5M7 21v-5h18v5"/></svg></div><h3>Redes e infraestrutura</h3><p>Projeto, instalação e organização de redes, cabeamento, switches e roteadores.</p></article>
-        <article class="service" data-reveal><div class="ico"><svg viewBox="0 0 32 32"><path d="M5 9h22M5 16h22M5 23h22"/><circle class="a" cx="11" cy="9" r="2.5"/><circle class="a" cx="21" cy="16" r="2.5"/><circle class="a" cx="13" cy="23" r="2.5"/></svg></div><h3>Configuração de equipamentos</h3><p>Computadores, roteadores, impressoras e programas prontos para uso.</p></article>
-        <article class="service" data-reveal><div class="ico"><svg viewBox="0 0 32 32"><rect x="8" y="8" width="16" height="16" rx="2.5"/><rect class="a" x="13" y="13" width="6" height="6" rx="1"/><path d="M12 4v4M16 4v4M20 4v4M12 24v4M16 24v4M20 24v4M4 12h4M4 16h4M4 20h4M24 12h4M24 16h4M24 20h4"/></svg></div><h3>Montagem de computadores</h3><p>Escolha de peças, montagem e testes de um computador sob medida para você.</p></article>
-      </div>
-    </section>
-
-    <section class="process" id="processo">
-      <div class="wrap">
-        <div class="section-head" data-reveal>
-          <span class="eyebrow">Como funciona</span>
-          <h2>Simples do começo ao fim</h2>
-          <p>Sem formulário complicado e sem surpresa. Você sabe o que será feito antes do atendimento começar.</p>
+      <div class="groups">
+        <div class="group">
+          <h3>Resolvemos à distância</h3>
+          <ul>
+            <li><strong>Meu computador está lento</strong><span>Otimização, limpeza, inicialização e ajustes para recuperar o desempenho.</span></li>
+            <li><strong>A internet cai ou o Wi-Fi não pega</strong><span>Configuração de rede, roteador, repetidor e solução de instabilidade.</span></li>
+            <li><strong>Acho que tem vírus</strong><span>Remoção de ameaças, pop-ups e programas que você não reconhece.</span></li>
+            <li><strong>A impressora não imprime</strong><span>Instalação, drivers, configuração e correção de falhas de impressão.</span></li>
+            <li><strong>Meu e-mail ou programa parou</strong><span>Contas, aplicativos, atualizações e programas que deixaram de funcionar.</span></li>
+            <li><strong>Preciso salvar meus arquivos</strong><span>Organização, cópia de segurança e tentativa de recuperação.</span></li>
+          </ul>
         </div>
-        <div class="steps">
-          <article class="step" data-reveal><h3>Envie uma mensagem</h3><p>Conte o problema e, se puder, mande uma foto ou print.</p></article>
-          <article class="step" data-reveal><h3>Receba a orientação</h3><p>Avaliamos o caso e explicamos a melhor forma de atendimento.</p></article>
-          <article class="step" data-reveal><h3>Autorize o acesso</h3><p>Quando necessário, você libera uma sessão remota temporária.</p></article>
-          <article class="step" data-reveal><h3>Teste a solução</h3><p>Validamos tudo com você e explicamos o que foi corrigido.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="wrap">
-      <div class="safety-layout">
-        <div class="safety-art" data-reveal aria-hidden="true">
-          <svg viewBox="0 0 400 320" fill="none">
-            <rect x="40" y="52" width="320" height="200" rx="22" fill="#fff"/>
-            <path d="M40 74a22 22 0 0 1 22-22h276a22 22 0 0 1 22 22v18H40z" fill="#0f2a24"/>
-            <circle cx="64" cy="72" r="5" fill="#ee6a2d"/><circle cx="82" cy="72" r="5" fill="#e4dac8"/><circle cx="100" cy="72" r="5" fill="#e4dac8"/>
-            <path d="M200 120l44 17v34c0 26-18 44-44 53-26-9-44-27-44-53v-34z" fill="#cfe9dd" stroke="#0f2a24" stroke-width="5" stroke-linejoin="round"/>
-            <path d="M182 171l14 14 26-30" stroke="#0f2a24" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="258" y="214" width="84" height="30" rx="15" fill="#1f9d6b"/>
-            <text x="300" y="234" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#fff">autorizada</text>
-          </svg>
-        </div>
-        <div data-reveal>
-          <span class="eyebrow">Segurança e transparência</span>
-          <h2>Seu computador continua sob seu controle</h2>
-          <p class="safety-intro">O atendimento remoto deve ser simples, mas nunca misterioso. Você acompanha a tela e recebe explicações claras em cada etapa.</p>
-          <ul class="safety-list">
-            <li><b>✓</b><div><strong>Acesso temporário</strong><span>A sessão depende da sua autorização.</span></div></li>
-            <li><b>✓</b><div><strong>Acompanhamento em tempo real</strong><span>Você vê tudo o que está sendo realizado.</span></div></li>
-            <li><b>✓</b><div><strong>Alinhamento antecipado</strong><span>Serviço e valor são confirmados antes do início.</span></div></li>
+        <div class="group">
+          <h3>Rede, configuração e montagem</h3>
+          <p>Remoto ou com visita, conforme o caso.</p>
+          <ul>
+            <li><strong>Quero montar ou arrumar a rede</strong><span>Projeto, instalação e organização de cabeamento, switches e roteadores.</span></li>
+            <li><strong>Comprei equipamentos novos</strong><span>Computadores, roteadores, impressoras e programas prontos para uso.</span></li>
+            <li><strong>Quero um computador sob medida</strong><span>Escolha de peças, montagem e testes.</span></li>
           </ul>
         </div>
       </div>
     </section>
 
+    <section class="process" id="processo">
+      <div class="wrap">
+        <div class="head">
+          <h2>Como é um atendimento, do começo ao fim</h2>
+          <p>Sem formulário e sem surpresa. Você sabe o que será feito antes de começar.</p>
+        </div>
+        <ol class="steps">
+          <li><h3>Você manda uma mensagem</h3><p>Conte o problema e, se puder, envie uma foto ou print.</p></li>
+          <li><h3>Recebe a orientação</h3><p>Avaliamos o caso e explicamos a melhor forma de atender.</p></li>
+          <li><h3>Autoriza o acesso</h3><p>Quando necessário, você libera uma sessão remota temporária.</p></li>
+          <li><h3>Testa a solução</h3><p>Conferimos tudo com você e explicamos o que foi corrigido.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="safety">
+        <div class="head" style="margin-bottom:0">
+          <h2>Seu computador continua sob seu controle</h2>
+          <p>O acesso remoto deve ser simples, mas nunca misterioso. Você acompanha a tela e recebe explicações claras em cada etapa.</p>
+        </div>
+        <dl>
+          <dt>A sessão só começa com a sua autorização</dt>
+          <dd>O acesso é temporário e você pode encerrar quando quiser.</dd>
+          <dt>Você vê tudo em tempo real</dt>
+          <dd>Cada ação aparece na sua tela enquanto acontece.</dd>
+          <dt>Serviço e valor combinados antes</dt>
+          <dd>Nada é feito sem você saber o que será feito e quanto custa.</dd>
+        </dl>
+      </div>
+    </section>
+
     <section class="wrap" id="valores" style="padding-top:24px">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Valores e compromisso</span>
+      <div class="head">
         <h2>Você sabe quanto vai pagar antes de começar</h2>
-        <p>Cada caso é diferente, por isso o valor é informado depois de entender o problema — nunca depois do serviço.</p>
+        <p>Cada caso é diferente. Por isso o valor é informado depois de entender o problema, nunca depois do serviço.</p>
       </div>
-      <div class="pricing-grid">
-        <article class="pricing-card" data-reveal><b>01</b><h3>Orientação inicial sem custo</h3><p>Conte o problema pelo WhatsApp e receba uma primeira avaliação, sem compromisso.</p></article>
-        <article class="pricing-card" data-reveal><b>02</b><h3>Valor combinado antes</h3><p>Serviço, valor e forma de pagamento são confirmados com você antes de qualquer acesso ao computador.</p></article>
-        <article class="pricing-card" data-reveal><b>03</b><h3>Sem surpresa</h3><p>Se for preciso peça ou visita presencial, você é avisado no diagnóstico e decide se segue.</p></article>
-      </div>
-      <div class="cta-strip" data-reveal>
-        <div><strong>Quer saber quanto custa o seu caso?</strong><p>Atendimento em Belo Horizonte e região metropolitana, remoto ou presencial conforme o serviço. Resposta de segunda a sábado, das 9h às 20h.</p></div>
-        <a class="button button-primary" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site.%20Quero%20saber%20o%20valor%20para%3A%20" target="_blank" rel="noopener">Pedir orçamento →</a>
+      <ul class="terms">
+        <li><h3>Orientação inicial sem custo</h3><p>Conte o problema pelo WhatsApp e receba uma primeira avaliação, sem compromisso.</p></li>
+        <li><h3>Valor combinado antes</h3><p>Serviço, valor e forma de pagamento são confirmados antes de qualquer acesso ao computador.</p></li>
+        <li><h3>Sem surpresa</h3><p>Se for preciso peça ou visita, você é avisado no diagnóstico e decide se segue.</p></li>
+      </ul>
+      <div class="terms-cta">
+        <div><strong>Quer saber quanto custa o seu caso?</strong><p>Atendimento em Belo Horizonte e região metropolitana, remoto ou presencial conforme o serviço.</p></div>
+        <a class="btn" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site.%20Quero%20saber%20o%20valor%20para%3A%20" target="_blank" rel="noopener">Pedir orçamento</a>
       </div>
     </section>
 
     <section class="wrap" id="duvidas" style="padding-top:24px">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">Perguntas frequentes</span>
-        <h2>Informação clara antes de começar</h2>
-      </div>
-      <div class="faq-list" data-reveal>
+      <div class="head"><h2>Dúvidas frequentes</h2></div>
+      <div class="faq">
         <details><summary>Como funciona o atendimento remoto?</summary><p>Você recebe uma orientação para iniciar uma conexão temporária. O acesso só começa depois da sua autorização, e você pode acompanhar e encerrar a sessão.</p></details>
         <details><summary>Todo problema pode ser resolvido à distância?</summary><p>Problemas de sistema, programas, e-mail, configuração e rede geralmente podem ser tratados remotamente. Se houver defeito físico ou necessidade de peça, isso será informado no diagnóstico.</p></details>
         <details><summary>Preciso entender de informática?</summary><p>Não. As orientações são passadas passo a passo, usando linguagem simples.</p></details>
@@ -351,56 +375,51 @@
     </section>
 
     <section class="closing wrap">
-      <div class="closing-card" data-reveal>
-        <h2>Vamos fazer sua tecnologia funcionar?</h2>
-        <p>Explique o problema pelo WhatsApp e receba uma orientação inicial.</p>
-        <a class="button button-primary" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site%20da%20TC%20Viana%20Tech.%20Meu%20problema%20%C3%A9%3A%20" target="_blank" rel="noopener">Começar atendimento →</a>
-        <a class="closing-email" href="mailto:tcviana.tech@gmail.com?subject=Contato%20pelo%20site%20TC%20Viana%20Tech&body=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%3A%20">ou envie um e-mail para tcviana.tech@gmail.com</a>
+      <div class="closing-band">
+        <img src="suporte.jpg" width="900" height="600" alt="Atendente de suporte técnico sorrindo, usando headset (foto ilustrativa)">
+        <div>
+          <h2>Conte o que aconteceu e receba uma orientação.</h2>
+          <p>A resposta vem pelo WhatsApp, de segunda a sábado, das 9h às 20h.</p>
+        </div>
+        <a class="btn" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site%20da%20TC%20Viana%20Tech.%20Meu%20problema%20%C3%A9%3A%20" target="_blank" rel="noopener">Abrir o WhatsApp</a>
+        <a class="closing-mail" href="mailto:tcviana.tech@gmail.com?subject=Contato%20pelo%20site%20TC%20Viana%20Tech&body=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%3A%20">Prefere e-mail? tcviana.tech@gmail.com</a>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="footer-inner wrap">
-      <a class="brand" href="#inicio"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" fill="#0f2a24"/><path d="M19 17l24 15-10.5 2.6L28 45z" fill="#ee6a2d" stroke="#ee6a2d" stroke-width="2" stroke-linejoin="round"/><path d="M40 15a17 17 0 0 1 9 9M44 10a24 24 0 0 1 12 12" fill="none" stroke="#cfe9dd" stroke-width="3" stroke-linecap="round"/></svg><span>TC Viana <em>Tech</em></span></a>
-      <div class="footer-meta"><a href="mailto:tcviana.tech@gmail.com">tcviana.tech@gmail.com</a><span>Seg a sáb · 9h–20h</span><span>© <span id="year"></span> TC Viana Tech</span><span>TCVIANA TECH LTDA · CNPJ 66.766.206/0001-35</span></div>
+      <a class="brand" href="#inicio"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="18" fill="#0f2a24"/><path d="M19 17l24 15-10.5 2.6L28 45z" fill="#ee6a2d" stroke="#ee6a2d" stroke-width="2" stroke-linejoin="round"/><path d="M40 15a17 17 0 0 1 9 9M44 10a24 24 0 0 1 12 12" fill="none" stroke="#cfe9dd" stroke-width="3" stroke-linecap="round"/></svg><span>TC Viana Tech</span></a>
+      <div class="footer-meta"><a href="mailto:tcviana.tech@gmail.com">tcviana.tech@gmail.com</a><span>Segunda a sábado, 9h às 20h</span><span>© <span id="year"></span> TC Viana Tech</span><span>TCVIANA TECH LTDA, CNPJ 66.766.206/0001-35</span></div>
     </div>
   </footer>
 
-  <a class="mobile-contact" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site%20da%20TC%20Viana%20Tech%20e%20preciso%20de%20ajuda." target="_blank" rel="noopener">Falar no WhatsApp →</a>
+  <a class="mobile-contact" href="https://wa.me/5531983954008?text=Oi%21%20Vim%20pelo%20site%20da%20TC%20Viana%20Tech%20e%20preciso%20de%20ajuda." target="_blank" rel="noopener">Chamar no WhatsApp</a>
 
   <script>
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const reveal = document.querySelectorAll('[data-reveal]');
-    if (reduceMotion || !('IntersectionObserver' in window)) {
-      reveal.forEach((item) => item.classList.add('visible'));
-    } else {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: .12 });
-      reveal.forEach((item) => observer.observe(item));
-    }
-    const header = document.querySelector('header');
-    const updateHeader = () => header.classList.toggle('scrolled', window.scrollY > 8);
-    updateHeader();
-    window.addEventListener('scroll', updateHeader, { passive: true });
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Status real conforme o horário de Brasília (seg a sáb, 9h–20h)
-    const status = document.getElementById('status');
+    // Status conforme o horário de Brasília (seg a sáb, 9h-20h)
     try {
       const parts = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: 'numeric', hourCycle: 'h23' }).formatToParts(new Date());
       const day = parts.find((p) => p.type === 'weekday').value;
       const hour = Number(parts.find((p) => p.type === 'hour').value);
       const open = day !== 'Sun' && hour >= 9 && hour < 20;
-      status.textContent = open ? 'Disponível agora' : 'Fora do horário · responde a partir das 9h';
-      document.getElementById('kicker').classList.toggle('offline', !open);
-    } catch (e) { /* mantém o horário estático */ }
+      document.getElementById('status').textContent = open ? 'Respondendo agora' : 'Fora do horário: respondemos a partir das 9h';
+      document.getElementById('open-now').classList.toggle('offline', !open);
+    } catch (e) { /* mantém o texto estático */ }
+
+    // Único movimento da página: os problemas do exemplo viram "resolvido", um a um
+    const rows = [...document.querySelectorAll('#session li')];
+    const finish = () => rows.forEach((r) => { r.classList.remove('checking'); r.classList.add('done'); });
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      finish();
+    } else {
+      rows.forEach((row, i) => {
+        setTimeout(() => row.classList.add('checking'), 900 + i * 1500);
+        setTimeout(() => { row.classList.remove('checking'); row.classList.add('done'); }, 1900 + i * 1500);
+      });
+    }
   </script>
 </body>
 </html>
